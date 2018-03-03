@@ -1,4 +1,4 @@
-.App {
+ /* .App {
   text-align: center;
 }
 
@@ -20,9 +20,18 @@
 
 .App-intro {
   font-size: large;
+} */
+
+html {
+  color: #2F3032;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
+#navbar {
+  /* position: relative; */
+  text-align: center;
+}
+
+#menu{
+ background-color: #2F3032
 }
