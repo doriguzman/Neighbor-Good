@@ -23,6 +23,9 @@ class NeighborGood extends React.Component {
         })
     }
 
+
+    
+
     handleMap = () => {
         const { SelectedComplaint } = this.state
         return (
@@ -40,9 +43,6 @@ class NeighborGood extends React.Component {
           <Home />
         )
     }
-
- 
-
 
 
     render() {
