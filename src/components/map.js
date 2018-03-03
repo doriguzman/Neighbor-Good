@@ -5,7 +5,7 @@ import ComplaintMarker from './complaintMarker'
 
 const defaultOptions = {
     defaultCenter: { lat: 40.7128, lng: -73.9 },
-    defaultZoom: 12
+    defaultZoom: 10
 };
 
 class Map extends React.Component {

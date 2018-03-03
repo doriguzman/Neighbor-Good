@@ -41,8 +41,6 @@ class NeighborGood extends React.Component {
         )
     }
 
- 
-
 
 
     render() {
