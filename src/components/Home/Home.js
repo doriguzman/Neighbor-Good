@@ -8,8 +8,8 @@ class Home extends React.Component{
       {
         user:'Olga', 
         story:` is getting old and she wants a clean neighborhood to enjoy! `, 
-        filterComplaint: '', 
-        image:'https://s3.envato.com/files/209579645/preview.jpg'
+        filterComplaint: 'Sanitation', 
+        image:'https://www.wpclipart.com/cartoon/people/women_cartoons/old_lady_cartoon.png'
       }, 
 
       {
@@ -23,8 +23,13 @@ class Home extends React.Component{
         story:` is an avid sports car owner and wants his cars to avoid possible damage.
         He wants a neighborhood with the minimal road issues! `, 
         filterComplaint: '', 
-        image:'https://vectortoons.com/wp-content/uploads/2014/12/recreation-collection-tom-001-575x345.jpg'
+        image:'https://previews.123rf.com/images/deviyanthi79/deviyanthi791404/deviyanthi79140400037/27968665-simple-cartoon-of-a-businessman-driving-a-sport-car.jpg'
+      }, 
+      {
+        user:'',
+        image: 'https://openclipart.org/image/2400px/svg_to_png/630/ryanlerch-thinkingboy-outline.png'
       }
+      
     ]
     this.URL = {
       Info: 'http://www1.nyc.gov/311/index.page'
