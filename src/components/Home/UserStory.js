@@ -21,7 +21,7 @@ const UserStory = ({ users }) => {
     <div class='userDiv' style={styles.container}>
             <p class='userStory'> {users.user}{users.story} </p>
             <img class='userImage' src={users.image}  style={styles.img}/>
-           {users.user ? <Link to =''> Are you {users.user}?</Link> : <p>I am none of these! <a href='localhost/neighborgood/map'> Go to Map!</a> </p> }
+           {users.user ?  <p>Are you {users.user}? </p>: <p><a href='localhost/neighborgood/map'>Go to the map to find out!</a> </p> }
     
         </div>
         )
