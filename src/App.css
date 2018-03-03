@@ -1,37 +1,31 @@
- /* .App {
+
+#map-container {
+  height: 500px;
+  width:650px;
+  display: block;
+  float:left;
+}
+
+.title {
+  text-align: center;
+  width: 400px;
+  font-size:x-large
+}
+#titleCon{
+  width:700px;
+  margin:20px 0px 100px 10px;
+}
+
+nav {
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-} */
-
-html {
-  color: #2F3032;
-}
-
-
-#navbar {
-  /* position: relative; */
-  text-align: center;
-}
-
-#menu{
- background-color: #2F3032
+#checklist {
+  /* background-color: #eeeeee;; */
+  position: absolute;
+  right: 0px;
+  top:130px;
+  padding-top:20px;
+  /* border: solid 1px; */
+  height:550px;
+  width:326.75px
 }

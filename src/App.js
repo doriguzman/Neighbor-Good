@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Link, Route, Switch } from 'react-router-dom'
+import NeighborGood from './components/neighborGood'
 
 class App extends Component {
   render() {
     return (
-      <div className='App'>
-      <nav id='nav bar'>Home  Map</nav>
-      <div id='mapContainer'>
-        <div className='map'></div>
-        <div className='key'></div>
-      </div>
-      <div id='home'>
-        <div className='title'></div>
-        <div className='userstroies'></div>
-      </div>
+      <div className="App">
+        <nav>
+          <Link to='/NeighborGood'>Home</Link>{" "}
+          <Link to='/NeighborGood/Map'>Map</Link>
+        </nav>
+        <Route path='/NeighborGood' component={NeighborGood}/>
       </div>
     );
   }
