@@ -23,11 +23,17 @@ body {
   font-size: 3em;
 }
 
-.App-intro {
-  font-size: large;
+#map-container {
+  height: 400px;
+  padding: 5px;
+  margin: 5px; 
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
+.title {
+  text-align: center;
+}
+
+nav {
+  text-align: center;
 }
