@@ -9,7 +9,7 @@ const ComplaintInfo = (complaint) => {
             <br />
             Location: {complaint.incident_address},{complaint.park_borough}, NY{" "}{complaint.incident_zip}
             <br />
-            description: {complaint.descriptor}
+            Description: {complaint.descriptor}
             </div>
     )
 }

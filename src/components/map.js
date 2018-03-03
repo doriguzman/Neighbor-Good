@@ -5,7 +5,7 @@ import ComplaintMarker from './complaintMarker'
 
 const defaultOptions = {
     defaultCenter: { lat: 40.7128, lng: -73.9 },
-    defaultZoom: 12
+    defaultZoom: 11
 };
 
 class Map extends React.Component {
@@ -23,6 +23,13 @@ class Map extends React.Component {
                 QUEENS: false,
                 MANHATTAN: false,
                 STATEN_ISLAND: false,
+            },
+            ComplaintsObj: {
+                Illegal_Parking: false,
+                Street_Condition: false,
+                Request_Large_Bulky_Item_Collection: false,
+                Graffiti: false,
+                Noise: false,
             }
         
         }
@@ -31,7 +38,7 @@ class Map extends React.Component {
             'Department of Parks and Recreation', 'Department of Buildings', 'Department of Health and Mental Hygiene', 'Department of Sanitation']
         this.boroughs = ['BRONX', 'BROOKLYN', 'QUEENS', 'MANHATTAN', 'STATEN_ISLAND']
         this.months = ['', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
-        this.testing = ["Illegal Parking", "Street Condition", "Request Large Bulky Item Collection", "Graffiti"]
+        this.incidents = ["Illegal_Parking", "Street_Condition", "Request_Large_Bulky_Item_Collection", "Graffiti", "Noise"]
     };
 
 
@@ -42,7 +49,7 @@ class Map extends React.Component {
                 console.log(`res.data`)
                 this.setState({
                     complaints: res.data.filter(complaint => complaint.location && complaint.location.coordinates),
-                    filtered: res.data.filter(complaint => complaint.location && complaint.location.coordinates)
+                    
                 });
             })
             .catch(err => {
@@ -68,20 +75,45 @@ class Map extends React.Component {
             Boroughs: {...Boroughs, [e.target.name]: e.target.checked },
         })
     }
+    
+    handleComplaintSelect = (e) => {
+        const { ComplaintsObj } = this.state
+        this.setState({
+            ComplaintsObj: {...ComplaintsObj, [e.target.name]: e.target.checked },
+        })
+    }
+
 
     filteredBoroughs = (complaint) => {
         const { Boroughs } = this.state
-        return Boroughs[complaint.borough.replace(/\s/g, '_')] 
+        // if every value is false
+            if(Object.values(Boroughs).every(x => !x)) {
+                return true
+            } else {
+                return Boroughs[complaint.borough.replace(/\s/g, '_')]
+                
+            }
     }
+
     
-    filterComplaints = () => {
-        
+    filterSelectedComplaint = (complaint) => {
+        const { ComplaintsObj } = this.state
+        // if every value equals false
+        if(Object.values(ComplaintsObj).every(x => !x)) {
+            return true
+        } else {
+            return ComplaintsObj[complaint.complaint_type.replace(/\s/g, '_')]            
+        }
+    }
+     
+    filteredComplaints = (complaint) => {
+          return this.filteredBoroughs(complaint) && this.filterSelectedComplaint(complaint)
     }
 
 
     render() {
         const { complaints, mapOptions, filtered, selectAgency, selectBorough, selectMonth, BRONX } = this.state;
-        console.log(`borough`, this.state.Boroughs)
+        console.log(`complaints`, this.state.ComplaintsObj)
 
         return (
             <div id="map-container">
@@ -93,7 +125,7 @@ class Map extends React.Component {
                     {...defaultOptions}
                     {...mapOptions}
                 >
-                    {complaints.filter(this.filteredBoroughs).slice(0, 501).map(complaint => (
+                    {complaints.filter(this.filteredComplaints).slice(0, 501).map(complaint => (
                         <ComplaintMarker
                             complaint={complaint}
                             image={`https://i.pinimg.com/originals/53/ec/92/53ec929800d1282c9ef59cd27c8c45d6.jpg`}
@@ -103,9 +135,13 @@ class Map extends React.Component {
                         />
                     ))}
                 </GoogleMapReact>
-                <ul id='checklist'>
+                <div id='checklist'>
+                <ul >
+                    <strong>SELECT A BOROUGH: </strong> {" "}
+                    <br />
                     {this.boroughs.map(borough => (
                         <li>
+                            
                             {borough}
                             <input
                                 name={borough}
@@ -116,6 +152,22 @@ class Map extends React.Component {
                         </li>
                     ))}
                 </ul>
+                <ul >
+                   <strong> SELECT A COMPLAINT: </strong> {" "}
+                    {this.incidents.map(incident => (
+                        <li>
+                            {incident}
+                            <input
+                                name={incident}
+                                type="checkbox"
+                                checked={this.state.ComplaintsObj[incident]}
+                                onChange={this.handleComplaintSelect}
+                            />
+                        </li>
+                    ))}
+                </ul>
+                </div>
+
             </div>
         );
     }

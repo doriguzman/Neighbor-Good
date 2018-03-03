@@ -9,8 +9,8 @@ class App extends Component {
     return (
       <div className="App">
         <nav>
-          <Link to='/NeighborGood'>Home</Link>{" "}
-          <Link to='/NeighborGood/Map'>Map</Link>
+          <Link id='link' to='/NeighborGood'>Home</Link>{" "}
+          <Link id='link' to='/NeighborGood/Map'>Map</Link>
         </nav>
         <Route path='/NeighborGood' component={NeighborGood}/>
       </div>
