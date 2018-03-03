@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { Link, Route, Switch } from 'react-router-dom'
 import Map from './map'
+import Home from './Home/Home'
 import ComplaintInfo from './complaintInfo'
 
 
@@ -36,9 +37,7 @@ class NeighborGood extends React.Component {
 
     handleHome = () => {
         return (
-            <div>
-                Under Construction...
-                </div>
+          <Home />
         )
     }
 
