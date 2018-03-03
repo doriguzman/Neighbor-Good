@@ -1,12 +1,17 @@
 .App {
   text-align: center;
 }
+body {
+  background-color: steelblue;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
-
+.link {
+  float: right;
+}
 .App-header {
   background-color: #222;
   height: 150px;
@@ -15,7 +20,7 @@
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 3em;
 }
 
 .App-intro {
