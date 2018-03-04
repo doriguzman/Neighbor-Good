@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Link, Switch, Route} from 'react-router-dom'; 
 import './App.css';
-import { Link, Route, Switch } from 'react-router-dom'
 import NeighborGood from './components/neighborGood'
+import Home from './components/Home/Home.js'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <Switch>
+          <Route exact path='/' component={Home}/>
+        </Switch>
         <nav>
-          <Link id='link' to='/NeighborGood'>Home</Link>{" "}
-          <Link id='link' to='/NeighborGood/Map'>Map</Link>
+          <Link to='/'>Home</Link>{" "}
+          <Link to='/NeighborGood/Map'>Map</Link>
         </nav>
         <Route path='/NeighborGood' component={NeighborGood}/>
       </div>

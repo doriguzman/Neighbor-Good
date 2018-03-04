@@ -32,15 +32,24 @@ class Home extends React.Component{
       }
       
     ]
+    this.URL = {
+      Info: 'http://www1.nyc.gov/311/index.page'
+    }
   }
 
-
+// handleClick = () => {
+// this.setState = {
+  
+// }
+// }
 
 render(){
   return(
-    <div id='homeTitle'>
-    <h1> Hi welcome to the NeighborGOOD App! </h1>
+    <div>
+    <h1> Welcome to NeighborGood! </h1>
     <UserStory users={this.users}/>
+    <span>Want to report an issue in your neighborhood? <a href='http://www1.nyc.gov/311/index.page'> Click Here</a></span>
+
 
 
       </div>

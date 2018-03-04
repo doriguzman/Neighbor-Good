@@ -16,7 +16,7 @@ const styles = {
 
 const UserStory = ({ users }) => {
   return(
-      <div id='stories' >
+      <div>
     {users.map(users=> 
     <div class='userDiv' style={styles.container}>
             <p class='userStory'> {users.user}{users.story} </p>
