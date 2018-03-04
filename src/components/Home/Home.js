@@ -2,6 +2,17 @@ import React, { Component } from 'react';
 import UserStory from './UserStory';
 import '../../CSS/Home.css'
 
+const styles = {
+
+  bottom: {
+
+    position: 'absolute',
+    // bottom:'0px',
+    width: '100%',
+    height: '60px',
+
+  }
+};
 class Home extends React.Component {
   constructor() {
     super();
@@ -34,52 +45,42 @@ class Home extends React.Component {
 
       {
         user: 'Adam',
-        story: ` is an avid sports car owner 
-        and wanted his cars to avoid 
-        possible damage.
-        He used our app to find a 
-        neighborhood 
-        with minimal road issues! `,
+        story: ` is an avid sports car owner and wanted his cars to avoid possible damage.
+        He used our app to find a neighborhood with minimal road issues! `,
+        story2: <p></p>,
         filterComplaint: '',
         image: 'https://previews.123rf.com/images/deviyanthi79/deviyanthi791404/deviyanthi79140400037/27968665-simple-cartoon-of-a-businessman-driving-a-sport-car.jpg'
       },
       {
         user: '',
-        story: `Are you not Olga? 
-        Are you not Quavo? 
-        Are you not Adam? 
-        Do you not know who you are?`,
+        story: <p><a href='localhost/neighborgood/map'>Go to the map to find out!</a> </p>,
         image: 'http://www.bamradionetwork.com/images/easyblog_images/4240/2e1ax_elegantwhite_entry_thinking.jpg'
       }
 
     ]
-    this.URL = {
-      Info: 'http://www1.nyc.gov/311/index.page'
-    }
   }
 
-  // handleClick = () => {
-  // this.setState = {
 
-  // }
-  // }
 
   render() {
     return (
-      
-      <div >
-        <div className='background'> </div>
-        <h1> Welcome to NeighborGood! </h1>
-        <UserStory users={this.users} />
-        <span>Want to report an issue in your neighborhood? <a href='http://www1.nyc.gov/311/index.page'> Click Here</a></span>
-
-
-
+<div>   
+      <div className='homeback'>
+          <div id='title'>
+          <h1> Welcome to NeighborGood </h1>
+          <h3> We want to help find the right neighborhood for you!</h3>
+         </div>
       </div>
+
+      <div id='allStories'>
+        <UserStory users={this.users} />
+        <h3 style={styles.bottom}>Want to report an issue in your neighborhood? <a href='http://www1.nyc.gov/311/index.page'> Click Here</a></h3>
+      </div>
+
+    </div>
     )
   }
 
 }
-
 
 export default Home; 
