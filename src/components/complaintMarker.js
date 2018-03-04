@@ -2,7 +2,8 @@ import React from "react";
 
 
 const ComplaintMarker = ({ image, selected, onComplaintClick, complaint  }) => (
-  <img
+  <img 
+    className={selected ? "complaint selected" : "complaint"}
     alt=""
     src={image}
     width='10'

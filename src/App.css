@@ -6,7 +6,7 @@
   
 
 .homeback{
-  background-image: url('https://sandiegomagazine.com/San-Diego-Magazine/March-2015/Best-Neighborhoods-in-San-Diego/The-Affordability-Crisis/san-diego-house-for-sale.jpg');
+  /* background-image: url('https://sandiegomagazine.com/San-Diego-Magazine/March-2015/Best-Neighborhoods-in-San-Diego/The-Affordability-Crisis/san-diego-house-for-sale.jpg'); */
   height: 800px;
   background-size: 100%;
   opacity: 0.2px
@@ -35,6 +35,13 @@ body{
   display: inline-block;
   padding-top:10px;
 }
+
+/* #map-container {
+  height: 400px;
+  width: 60%;
+  padding: 5px;
+  margin: 0 auto; 
+} */
 
 nav {
   text-align: center;
@@ -81,6 +88,14 @@ margin-top: 0;
 #complaintinfo{
   padding-top:10px;
 }
+/* ul {
+  list-style-type: none;
+  margin-top: 50px;
+}*/
+
+#feed {
+  text-align: center;
+} 
 
 .userDiv{
   display:inline-block;
@@ -89,3 +104,4 @@ margin-top: 0;
 .homeback #Map{
   background-color: white
 }
+
