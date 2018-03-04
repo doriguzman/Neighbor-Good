@@ -112,7 +112,7 @@ class Map extends React.Component {
         const { complaints, mapOptions, selectedComplaintId } = this.state;
         return (
             <div id="map-container">
-                <GoogleMapReact
+                <GoogleMapReact 
                     bootstrapURLKeys={{
                         key: "AIzaSyBcCGZr6R8jHxcmRoMtwD6vkUDAw-ceXDU"
                     }}
@@ -131,10 +131,12 @@ class Map extends React.Component {
                         />
                     ))}
                 </GoogleMapReact>
-                <ul>
-                    SELECT A BOROUGH: {" "}
+                <div id='checklist'>
+                <ul >
+                    <strong>SELECT A BOROUGH: </strong> {" "}
+                    <br />
                     {this.boroughs.map(borough => (
-                        <li>
+                        <li >
                             {borough.split('_').join(' ')}
                             <input
                                 name={borough}
@@ -145,8 +147,8 @@ class Map extends React.Component {
                         </li>
                     ))}
                 </ul>
-                <ul>
-                    SELECT A COMPLAINT: {" "}
+                <ul >
+                   <strong> SELECT A COMPLAINT: </strong> {" "}
                     {this.incidents.map(incident => (
                         <li>
                             {incident.split('_').join(' ')}
@@ -159,6 +161,7 @@ class Map extends React.Component {
                         </li>
                     ))}
                 </ul>
+                </div>
 
             </div>
         );
