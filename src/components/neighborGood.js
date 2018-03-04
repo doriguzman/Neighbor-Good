@@ -7,6 +7,7 @@ import ComplaintInfo from './complaintInfo'
 
 
 
+
 class NeighborGood extends React.Component {
     constructor() {
         super();
@@ -43,6 +44,8 @@ class NeighborGood extends React.Component {
           <Home />
         )
     }
+
+
 
 
     render() {
