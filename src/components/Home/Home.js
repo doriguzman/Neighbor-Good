@@ -19,6 +19,7 @@ class Home extends React.Component{
         filterComplaint: '', 
         image:'https://ih0.redbubble.net/image.402188121.9994/flat,800x800,070,f.u1.jpg'
       },
+      
       {
         user:'Adam', 
         story:` is an avid sports car owner and wanted his cars to avoid possible damage.
@@ -28,7 +29,10 @@ class Home extends React.Component{
       }, 
       {
         user:'',
-        image: 'https://openclipart.org/image/2400px/svg_to_png/630/ryanlerch-thinkingboy-outline.png'
+        story:`dfsggdsgs
+        sgffggs
+        sdgfsdgds`,
+        image: 'http://www.bamradionetwork.com/images/easyblog_images/4240/2e1ax_elegantwhite_entry_thinking.jpg'
       }
       
     ]

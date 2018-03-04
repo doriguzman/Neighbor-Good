@@ -8,6 +8,7 @@ import Feed from './Feed'
 
 
 
+
 class NeighborGood extends React.Component {
     constructor() {
         super();
@@ -50,6 +51,8 @@ class NeighborGood extends React.Component {
             <Feed />
         )
     }
+
+
 
 
     render() {
