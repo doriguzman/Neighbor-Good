@@ -7,13 +7,15 @@ import Home from './components/Home/Home.js'
 class App extends Component {
   render() {
     return (
-      <div className='homeback'>
+      <div>
+       
       <nav>
           <Link to='/'>Home</Link>{" "}
           <Link to='/NeighborGood/Map'>Map</Link>{" "}
           <Link to='/NeighborGood/Feed'>Feed</Link>
 
         </nav>
+      
       
         <Switch>
           <Route  exact path='/' component={Home}/>

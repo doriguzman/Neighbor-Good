@@ -28,7 +28,7 @@ const styles = {
 const UserStory = ({ users }) => {
   return (
     <div>
-      <div>
+     
       {users.map(users =>
   
         <div class='userDiv' style={styles.container}>
@@ -38,7 +38,7 @@ const UserStory = ({ users }) => {
         </div>
       )
       }
-      </div>
+      
       {/* <h3 style={styles.bottom}>Want to report an issue in your neighborhood? <a href='http://www1.nyc.gov/311/index.page'> Click Here</a></h3> */}
     </div>
   )

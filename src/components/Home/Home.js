@@ -5,17 +5,17 @@ import UserStory from './UserStory';
 
 const styles = {
 
-  bottom:{
-  
-      position:'absolute',
-      // bottom:'0px',
-      width:'100%',
-      height:'60px',
-   
+  bottom: {
+
+    position: 'absolute',
+    // bottom:'0px',
+    width: '100%',
+    height: '60px',
+
   }
 };
-class Home extends React.Component{
-  constructor(){
+class Home extends React.Component {
+  constructor() {
     super();
     this.users = [
       {
@@ -45,33 +45,40 @@ class Home extends React.Component{
       },
 
       {
-        user:'Adam', 
-        story:` is an avid sports car owner and wanted his cars to avoid possible damage.
-        He used our app to find a neighborhood with minimal road issues! `, 
-        story2: <p></p>, 
-        filterComplaint: '', 
-        image:'https://previews.123rf.com/images/deviyanthi79/deviyanthi791404/deviyanthi79140400037/27968665-simple-cartoon-of-a-businessman-driving-a-sport-car.jpg'
-      }, 
+        user: 'Adam',
+        story: ` is an avid sports car owner and wanted his cars to avoid possible damage.
+        He used our app to find a neighborhood with minimal road issues! `,
+        story2: <p></p>,
+        filterComplaint: '',
+        image: 'https://previews.123rf.com/images/deviyanthi79/deviyanthi791404/deviyanthi79140400037/27968665-simple-cartoon-of-a-businessman-driving-a-sport-car.jpg'
+      },
       {
-        user:'',
-        story:<p><a href='localhost/neighborgood/map'>Go to the map to find out!</a> </p> ,
+        user: '',
+        story: <p><a href='localhost/neighborgood/map'>Go to the map to find out!</a> </p>,
         image: 'http://www.bamradionetwork.com/images/easyblog_images/4240/2e1ax_elegantwhite_entry_thinking.jpg'
       }
 
     ]
   }
 
- 
 
-render(){
-  return(
-    <div>
-      
-    <h1> Welcome to NeighborGood! </h1>
-    <UserStory users={this.users}/>
-    <h3 style={styles.bottom}>Want to report an issue in your neighborhood? <a href='http://www1.nyc.gov/311/index.page'> Click Here</a></h3>
 
+  render() {
+    return (
+<div>   
+      <div className='homeback'>
+          <div id='title'>
+          <h1> Welcome to NeighborGood </h1>
+          <h3> We want to help find the right neighborhood for you!</h3>
+         </div>
       </div>
+
+      <div>
+        <UserStory users={this.users} />
+        <h3 style={styles.bottom}>Want to report an issue in your neighborhood? <a href='http://www1.nyc.gov/311/index.page'> Click Here</a></h3>
+      </div>
+
+    </div>
     )
   }
 
