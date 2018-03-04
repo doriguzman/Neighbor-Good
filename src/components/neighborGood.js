@@ -4,7 +4,8 @@ import { Link, Route, Switch } from 'react-router-dom'
 import Map from './map'
 import Home from './Home/Home'
 import ComplaintInfo from './complaintInfo'
-import RecentComplaints from './recentcomplaints';
+import Feed from './Feed'
+
 
 
 
@@ -26,7 +27,6 @@ class NeighborGood extends React.Component {
 
 
     
-
     handleMap = () => {
         const { SelectedComplaint } = this.state
         return (
@@ -45,21 +45,13 @@ class NeighborGood extends React.Component {
         )
     }
 
-<<<<<<< HEAD
-    handleRecentComplaints = () => {
-        return (
-            <RecentComplaints />
-        )
-    }
-=======
     handleFeed = () => {
         return (
-            <div>
-                </div>
+            <Feed />
         )
     }
 
->>>>>>> 6767bd35d86afee33c052579d415f1f2befb7790
+
 
     render() {
         const { SelectedComplaint } = this.state
@@ -69,11 +61,7 @@ class NeighborGood extends React.Component {
                 <Switch>
                     <Route exact path='/NeighborGood' render={this.handleHome} />
                     <Route path='/NeighborGood/map' render={this.handleMap} />
-<<<<<<< HEAD
-                    <Route path='/NeighborGood/recentcomplaints' render={this.handleRecentComplaints} />
-=======
                     <Route path='/NeighborGood/feed' render={this.handleFeed} />
->>>>>>> 6767bd35d86afee33c052579d415f1f2befb7790
                 </Switch>
             </div>
         )
