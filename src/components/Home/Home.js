@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import UserStory from './UserStory';
-// import './style.css';
-
+import '../../CSS/Home.css'
 
 const styles = {
 
@@ -73,7 +72,7 @@ class Home extends React.Component {
          </div>
       </div>
 
-      <div>
+      <div id='allStories'>
         <UserStory users={this.users} />
         <h3 style={styles.bottom}>Want to report an issue in your neighborhood? <a href='http://www1.nyc.gov/311/index.page'> Click Here</a></h3>
       </div>

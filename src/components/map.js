@@ -2,10 +2,12 @@ import React from "react";
 import GoogleMapReact from "google-map-react";
 import axios from "axios";
 import ComplaintMarker from './complaintMarker'
+import ComplaintPicture from './complaintPicture'
+import '../CSS/Map.css'
 
 const defaultOptions = {
     defaultCenter: { lat: 40.7128, lng: -73.9 },
-    defaultZoom: 10
+    defaultZoom: 11
 };
 
 class Map extends React.Component {
@@ -15,7 +17,6 @@ class Map extends React.Component {
             mapOptions: defaultOptions,
             complaints: [],
             image: '',
-            filtered: [],
             selectedComplaintId: null,
             Boroughs: {
                 BRONX: false,
@@ -32,26 +33,22 @@ class Map extends React.Component {
                 Noise: false,
                 Taxi_Complaint: false,
                 Rodent: false,
-                Other: false,
             }
-        
+
         }
-        this.agencies = ['', 'Department of Housing Preservation and Development', 'New York City Police Department', 'Department of Transportation',
-            'Department of Environmental Protection',
-            'Department of Parks and Recreation', 'Department of Buildings', 'Department of Health and Mental Hygiene', 'Department of Sanitation']
         this.boroughs = ['BRONX', 'BROOKLYN', 'QUEENS', 'MANHATTAN', 'STATEN_ISLAND']
-        this.months = ['', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
-        this.incidents = ["Illegal_Parking", "Street_Condition", "Request_Large_Bulky_Item_Collection", "Graffiti", "Noise", "Taxi_Complaint", "Rodent", "Other"]
+        this.incidents = ["Illegal_Parking", "Street_Condition", "Request_Large_Bulky_Item_Collection", "Graffiti", "Taxi_Complaint", "Rodent", "Noise_-_Residential", "Noise_-_Vehicle", "Noise_-_Commercial", "Damaged_Tree"]
     };
 
 
     componentDidMount() {
         axios
-            .get("https://data.cityofnewyork.us/resource/fhrw-4uyv.json")
+            .get("https://data.cityofnewyork.us/resource/fhrw-4uyv.json?$$app_token=YCxIsYgQo0t4M310jwJdkoMpC&$limit=5000")
             .then(res => {
-                console.log(`res.data`)
+                console.log(`res.dataaaaa`, res.data)
                 this.setState({
-                    complaints: res.data.filter(complaint => complaint.location && complaint.location.coordinates),
+                    complaints: res.data.filter(complaint => complaint.location && complaint.location.coordinates
+                        && complaint.incident_address && complaint.park_borough),
                 });
             })
             .catch(err => {
@@ -60,7 +57,6 @@ class Map extends React.Component {
     }
 
     onMapChange = options => {
-        console.log(options)
         this.setState({
             mapOptions: options
         });
@@ -74,14 +70,14 @@ class Map extends React.Component {
     handleBoroughSelect = (e) => {
         const { Boroughs } = this.state
         this.setState({
-            Boroughs: {...Boroughs, [e.target.name]: e.target.checked },
+            Boroughs: { ...Boroughs, [e.target.name]: e.target.checked },
         })
     }
-    
+
     handleComplaintSelect = (e) => {
         const { ComplaintsObj } = this.state
         this.setState({
-            ComplaintsObj: {...ComplaintsObj, [e.target.name]: e.target.checked },
+            ComplaintsObj: { ...ComplaintsObj, [e.target.name]: e.target.checked },
         })
     }
 
@@ -89,36 +85,36 @@ class Map extends React.Component {
     filteredBoroughs = (complaint) => {
         const { Boroughs } = this.state
         // if every value is false
-            if(Object.values(Boroughs).every(x => !x)) {
-                return true
-            } else {
-                return Boroughs[complaint.borough.replace(/\s/g, '_')]
-            }
+        if (Object.values(Boroughs).every(x => !x)) {
+            return true
+        } else {
+            return Boroughs[complaint.borough.replace(/\s/g, '_')]
+        }
     }
 
-    
+
     filterSelectedComplaint = (complaint) => {
         const { ComplaintsObj } = this.state
         // if every value equals false
-        if(Object.values(ComplaintsObj).every(x => !x)) {
+        if (Object.values(ComplaintsObj).every(x => !x)) {
             return true
         } else {
-            return ComplaintsObj[complaint.complaint_type.replace(/\s/g, '_')]            
+            return ComplaintsObj[complaint.complaint_type.replace(/\s/g, '_')]
         }
     }
-     
+
     filteredComplaints = (complaint) => {
-          return this.filteredBoroughs(complaint) && this.filterSelectedComplaint(complaint)
+        return this.filteredBoroughs(complaint) && this.filterSelectedComplaint(complaint)
     }
 
 
     render() {
-        const { complaints, mapOptions, filtered, selectAgency, selectBorough, selectMonth, BRONX } = this.state;
-        console.log(`complaints`, this.state.ComplaintsObj)
-
+        const { complaints, mapOptions, selectedComplaintId } = this.state;
+        console.log(this.state.ComplaintsObj)
         return (
             <div id="map-container">
-                <GoogleMapReact 
+                <GoogleMapReact
+                    id="googleMap" 
                     bootstrapURLKeys={{
                         key: "AIzaSyBcCGZr6R8jHxcmRoMtwD6vkUDAw-ceXDU"
                     }}
@@ -128,14 +124,16 @@ class Map extends React.Component {
                 >
                     {complaints.filter(this.filteredComplaints).slice(0, 501).map(complaint => (
                         <ComplaintMarker
+                            selected={complaint.unique_key === selectedComplaintId}
                             complaint={complaint}
-                            image={`https://i.pinimg.com/originals/53/ec/92/53ec929800d1282c9ef59cd27c8c45d6.jpg`}
+                            image={ComplaintPicture(complaint)}
                             lat={complaint.location.coordinates[1]}
                             lng={complaint.location.coordinates[0]}
                             onComplaintClick={() => this.handleComplaintClick(complaint)}
                         />
                     ))}
                 </GoogleMapReact>
+                <i>This information is provided by NYC Open Data 311</i>
                 <div id='checklist'>
                 <ul >
                     <strong>SELECT A BOROUGH: </strong> {" "}

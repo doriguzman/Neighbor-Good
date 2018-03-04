@@ -1,0 +1,9 @@
+.complaint:hover {
+    cursor: pointer;
+    transform: scale(1.25);
+  }
+  
+  .complaint.selected {
+    transform: scale(2.0);
+  }
+  
