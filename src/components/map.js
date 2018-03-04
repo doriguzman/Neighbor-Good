@@ -117,6 +117,7 @@ class Map extends React.Component {
         console.log(`complaints`, this.state.ComplaintsObj)
 
         return (
+           
             <div id="map-container">
                 <GoogleMapReact 
                     bootstrapURLKeys={{
@@ -169,6 +170,7 @@ class Map extends React.Component {
                 </div>
 
             </div>
+           
         );
     }
 }

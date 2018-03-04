@@ -8,7 +8,8 @@
 .homeback{
   background-image: url('https://sandiegomagazine.com/San-Diego-Magazine/March-2015/Best-Neighborhoods-in-San-Diego/The-Affordability-Crisis/san-diego-house-for-sale.jpg');
   height: 800px;
-  background-size: 100%
+  background-size: 100%;
+  opacity: 0.2px
 }
 
 #map-container {
@@ -85,3 +86,6 @@ margin-top: 0;
   display:inline-block;
 }
 
+.homeback #Map{
+  background-color: white
+}

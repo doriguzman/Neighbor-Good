@@ -10,7 +10,7 @@ class App extends Component {
       <div className='homeback'>
       <nav>
           <Link to='/'>Home</Link>{" "}
-          <Link to='/NeighborGood/Map'>Map</Link>{" "}
+          <Link id='Map' to='/NeighborGood/Map'>Map</Link>{" "}
           <Link to='/NeighborGood/Feed'>Feed</Link>
         </nav>
       
