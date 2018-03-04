@@ -7,7 +7,7 @@ import Home from './components/Home/Home.js'
 class App extends Component {
   render() {
     return (
-      <div className='homeback'>
+      <div >
       <nav>
           <Link to='/'>Home</Link>{" "}
           <Link id='Map' to='/NeighborGood/Map'>Map</Link>{" "}

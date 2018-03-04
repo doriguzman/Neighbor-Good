@@ -67,7 +67,8 @@ class Home extends React.Component {
   render() {
     return (
       
-      <div >
+      <div className='homeback'  >
+      {/* <img className='homebackpic' src='https://sandiegomagazine.com/San-Diego-Magazine/March-2015/Best-Neighborhoods-in-San-Diego/The-Affordability-Crisis/san-diego-house-for-sale.jpg' /> */}
         <div className='background'> </div>
         <h1> Welcome to NeighborGood! </h1>
         <UserStory users={this.users} />
