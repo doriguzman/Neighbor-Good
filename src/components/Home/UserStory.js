@@ -13,6 +13,7 @@ const styles = {
     height: "10em",
     borderRadius: '8em'
   }
+ 
 };
 
 const UserStory = ({ users }) => {
@@ -23,7 +24,6 @@ const UserStory = ({ users }) => {
           <img class='userImage' src={users.image} style={styles.img} />
           <p class='userStory'> {users.user}{users.story} </p>
           {users.user ? <p>Are you {users.user}? </p> : <p><Link to='/NeighborGood/Map'>Go to the map to find out!</Link> </p>}
-
         </div>
       )
       }
