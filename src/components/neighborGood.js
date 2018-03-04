@@ -45,11 +45,21 @@ class NeighborGood extends React.Component {
         )
     }
 
+<<<<<<< HEAD
     handleRecentComplaints = () => {
         return (
             <RecentComplaints />
         )
     }
+=======
+    handleFeed = () => {
+        return (
+            <div>
+                </div>
+        )
+    }
+
+>>>>>>> 6767bd35d86afee33c052579d415f1f2befb7790
 
     render() {
         const { SelectedComplaint } = this.state
@@ -59,7 +69,11 @@ class NeighborGood extends React.Component {
                 <Switch>
                     <Route exact path='/NeighborGood' render={this.handleHome} />
                     <Route path='/NeighborGood/map' render={this.handleMap} />
+<<<<<<< HEAD
                     <Route path='/NeighborGood/recentcomplaints' render={this.handleRecentComplaints} />
+=======
+                    <Route path='/NeighborGood/feed' render={this.handleFeed} />
+>>>>>>> 6767bd35d86afee33c052579d415f1f2befb7790
                 </Switch>
             </div>
         )
