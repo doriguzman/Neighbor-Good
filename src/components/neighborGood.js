@@ -32,9 +32,9 @@ class NeighborGood extends React.Component {
         const { SelectedComplaint } = this.state
         return (
             <div id='titleCon'>
-                <h1 id="title">311's Reported Complaints</h1>
-                {SelectedComplaint ? ComplaintInfo(SelectedComplaint) : <strong id='compDes'> Choose a complaint </strong>}
+                <h1 id="title">Neighbor-Good</h1>
                 <Map onComplaintClick={this.handleComplaint} />
+                {SelectedComplaint ? ComplaintInfo(SelectedComplaint) : <strong id='compDes'> Choose a complaint </strong>}
                 <br />
             </div>
         )
