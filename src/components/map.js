@@ -111,61 +111,63 @@ class Map extends React.Component {
     render() {
         const { complaints, mapOptions, selectedComplaintId } = this.state;
         return (
-           
-            <div id="map-container">
-                <GoogleMapReact 
-                    bootstrapURLKeys={{
-                        key: "AIzaSyBcCGZr6R8jHxcmRoMtwD6vkUDAw-ceXDU"
-                    }}
-                    onChange={this.onMapChange}
-                    {...defaultOptions}
-                    {...mapOptions}
-                >
-                    {complaints.filter(this.filteredComplaints).slice(0, 501).map(complaint => (
-                        <ComplaintMarker
-                            selected={complaint.unique_key === selectedComplaintId}
-                            complaint={complaint}
-                            image={`https://i.pinimg.com/originals/53/ec/92/53ec929800d1282c9ef59cd27c8c45d6.jpg`}
-                            lat={complaint.location.coordinates[1]}
-                            lng={complaint.location.coordinates[0]}
-                            onComplaintClick={() => this.handleComplaintClick(complaint)}
-                        />
-                    ))}
-                </GoogleMapReact>
-                <div id='checklist'>
-                <ul >
-                    <strong>SELECT A BOROUGH: </strong> {" "}
-                    <br />
-                    {this.boroughs.map(borough => (
-                        <li >
-                            {borough.split('_').join(' ')}
-                            <input
-                                name={borough}
-                                type="checkbox"
-                                checked={this.state.Boroughs[borough]}
-                                onChange={this.handleBoroughSelect}
+            
+                <div id="map-container">
+                    <GoogleMapReact 
+                    id="googleMap"
+                    
+                        bootstrapURLKeys={{
+                            key: "AIzaSyBcCGZr6R8jHxcmRoMtwD6vkUDAw-ceXDU"
+                        }}
+                        onChange={this.onMapChange}
+                        {...defaultOptions}
+                        {...mapOptions}
+                    >
+                        {complaints.filter(this.filteredComplaints).slice(0, 501).map(complaint => (
+                            <ComplaintMarker
+                                selected={complaint.unique_key === selectedComplaintId}
+                                complaint={complaint}
+                                image={`https://i.pinimg.com/originals/53/ec/92/53ec929800d1282c9ef59cd27c8c45d6.jpg`}
+                                lat={complaint.location.coordinates[1]}
+                                lng={complaint.location.coordinates[0]}
+                                onComplaintClick={() => this.handleComplaintClick(complaint)}
                             />
-                        </li>
-                    ))}
-                </ul>
-                <ul >
-                   <strong> SELECT A COMPLAINT: </strong> {" "}
-                    {this.incidents.map(incident => (
-                        <li>
-                            {incident.split('_').join(' ')}
-                            <input
-                                name={incident}
-                                type="checkbox"
-                                checked={this.state.ComplaintsObj[incident]}
-                                onChange={this.handleComplaintSelect}
-                            />
-                        </li>
-                    ))}
-                </ul>
+                        ))}
+                    </GoogleMapReact>
+                    <div id='checklist'>
+                        <ul >
+                            <strong>SELECT A BOROUGH: </strong> {" "}
+                            <br />
+                            {this.boroughs.map(borough => (
+                                <li >
+                                    {borough.split('_').join(' ')}
+                                    <input
+                                        name={borough}
+                                        type="checkbox"
+                                        checked={this.state.Boroughs[borough]}
+                                        onChange={this.handleBoroughSelect}
+                                    />
+                                </li>
+                            ))}
+                        </ul>
+                        <ul >
+                            <strong> SELECT A COMPLAINT: </strong> {" "}
+                            {this.incidents.map(incident => (
+                                <li>
+                                    {incident.split('_').join(' ')}
+                                    <input
+                                        name={incident}
+                                        type="checkbox"
+                                        checked={this.state.ComplaintsObj[incident]}
+                                        onChange={this.handleComplaintSelect}
+                                    />
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
-
-            </div>
            
+
         );
     }
 }

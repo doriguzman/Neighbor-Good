@@ -1,108 +1,111 @@
-
-
-  /* background-color:rgb(243, 240, 240); */
+/* background-color:rgb(243, 240, 240); */
   /* background-image: url('https://na.rdcpix.com/956655953/8ecb8b5c10a19ccbe1daba7bc38ec77cw-c293724xd-w685_h860_q80.jpg'); */
   /* background-size: 100%; */
   
 
-.homeback{
-  background-image: url('https://sandiegomagazine.com/San-Diego-Magazine/March-2015/Best-Neighborhoods-in-San-Diego/The-Affordability-Crisis/san-diego-house-for-sale.jpg');
-  height: 800px;
-  background-size: 100%;
-  /* opacity: 0.5px; */
-}
+  .homeback{
+    height: 700px;
+    background-size: 100%;
+    opacity: 0.5px
+  }
+  
+  #map-container {
+    height: 500px;
+    width:70%;
+    display: flex;
+    justify-content: space-around;
+    padding-top:20px;
+  }
+  
+  body{
+    text-align:center;
+  }
+  
+  #title {
+    /* display: inline-block; */
+    margin:auto;
+    right: 0;
+    left: 0;
+  }
 
-#map-container {
-  height: 500px;
-  width:670px;
-  padding-top:20px;
-}
-
-body{
-  text-align:center;
-}
-
-#title {
-  /* display: inline-block; */
-  padding-top:30px;
-  margin:auto;
-  top:50px;
-  right: 0;
-  left: 0;
-}
-
-#titleCon{
-  width:700px;
-  text-align: center;
-  display: inline-block;
-  top:10;
-
-}
-
-/* #map-container {
-  height: 400px;
-  width: 60%;
-  padding: 5px;
-  margin: 0 auto; 
-} */
-
-nav {
-  text-align: center;
-  position:absolute;
-  padding-top:5px;
-  /* background-color: black; */
-  width:125px;
-  height:20px;
-  margin:auto;
-  right: 0;
-  left: 0;
-}
-#link {
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
- ul{
-list-style-type: none;
-}
-
-#checklist li{
-  text-align: right;
-  padding-right:20px;
-  padding-top:5px;
-}
- 
-#checklist {
-  /* border: solid 2px; */
-  width:350px;
-  right:0px;
-  top:104px;
-  position: absolute
-}
-h1 {
-  text-align: center;
-  padding-top:30px;
-  margin-top: 0px;
- 
-}
-
-#p1{
-margin-top: 0;
-}
-#complaintinfo{
-  padding-top:10px;
-}
-/* ul {
+  #googleMap {
+    width: 70%;
+    min-width: 10px;
+  }
+  #titleCon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    text-align: center;
+    padding-top:10px;
+  }
+  
+  /* #map-container {
+    height: 400px;
+    width: 60%;
+    padding: 5px;
+    margin: 0 auto; 
+  } */
+  
+  nav {
+    text-align: center;
+    padding-top:5px;
+    background-color: mintcream;
+    width:125px;
+    height:20px;
+    margin:auto;
+    right: 0;
+    left: 0;
+  }
+  #link {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  ul{
   list-style-type: none;
-  margin-top: 50px;
-}*/
-
-#feed {
-  text-align: center;
-} 
-
-.userDiv{
-  display:inline-block;
-}
-
-
+  }
+  
+  li{
+    text-align: right;
+    padding-right:20px;
+    padding-top:5px;
+  }
+   
+  #checklist {
+    /* border: solid 2px; */
+    width:30%;
+    right:0px;
+    top:104px;
+    position: absolute
+  }
+  h1 {
+    text-align: center;
+    padding-top:10px;
+    margin-top: 0px;
+   
+  }
+  
+  #p1{
+  margin-top: 0;
+  }
+  #complaintinfo{
+    padding-top:10px;
+  }
+  /* ul {
+    list-style-type: none;
+    margin-top: 50px;
+  }
+  
+  #feed {
+    text-align: center;
+  } */
+  
+  .userDiv{
+    display:inline-block;
+  }
+  
+  .homeback #Map{
+    background-color: white
+  } 
