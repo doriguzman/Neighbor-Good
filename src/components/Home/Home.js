@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import UserStory from './UserStory';
-
+import '../../CSS/Home.css'
 
 class Home extends React.Component {
   constructor() {

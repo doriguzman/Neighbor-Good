@@ -2,6 +2,8 @@ import React from "react";
 import GoogleMapReact from "google-map-react";
 import axios from "axios";
 import ComplaintMarker from './complaintMarker'
+import ComplaintPicture from './complaintPicture'
+import '../CSS/Map.css'
 
 const defaultOptions = {
     defaultCenter: { lat: 40.7128, lng: -73.9 },
@@ -15,7 +17,6 @@ class Map extends React.Component {
             mapOptions: defaultOptions,
             complaints: [],
             image: '',
-            filtered: [],
             selectedComplaintId: null,
             Boroughs: {
                 BRONX: false,
@@ -32,20 +33,19 @@ class Map extends React.Component {
                 Noise: false,
                 Taxi_Complaint: false,
                 Rodent: false,
-                Other: false,
             }
 
         }
         this.boroughs = ['BRONX', 'BROOKLYN', 'QUEENS', 'MANHATTAN', 'STATEN_ISLAND']
-        this.incidents = ["Illegal_Parking", "Street_Condition", "Request_Large_Bulky_Item_Collection", "Graffiti", "Noise", "Taxi_Complaint", "Rodent", "Other"]
+        this.incidents = ["Illegal_Parking", "Street_Condition", "Request_Large_Bulky_Item_Collection", "Graffiti", "Taxi_Complaint", "Rodent", "Noise_-_Residential", "Noise_-_Vehicle", "Noise_-_Commercial", "Damaged_Tree"]
     };
 
 
     componentDidMount() {
         axios
-            .get("https://data.cityofnewyork.us/resource/fhrw-4uyv.json")
+            .get("https://data.cityofnewyork.us/resource/fhrw-4uyv.json?$$app_token=YCxIsYgQo0t4M310jwJdkoMpC&$limit=5000")
             .then(res => {
-                console.log(`res.data`)
+                console.log(`res.dataaaaa`, res.data)
                 this.setState({
                     complaints: res.data.filter(complaint => complaint.location && complaint.location.coordinates
                         && complaint.incident_address && complaint.park_borough),
@@ -110,29 +110,29 @@ class Map extends React.Component {
 
     render() {
         const { complaints, mapOptions, selectedComplaintId } = this.state;
+        console.log(this.state.ComplaintsObj)
         return (
+            <div id="map-container">
+                <GoogleMapReact
+                    id="googleMap" 
+                    bootstrapURLKeys={{
+                        key: "AIzaSyBcCGZr6R8jHxcmRoMtwD6vkUDAw-ceXDU"
+                    }}
+                    onChange={this.onMapChange}
+                    {...defaultOptions}
+                    {...mapOptions}
+                >
+                    {complaints.filter(this.filteredComplaints).slice(0, 501).map(complaint => (
+                        <ComplaintMarker
+                            selected={complaint.unique_key === selectedComplaintId}
+                            complaint={complaint}
+                            image={ComplaintPicture(complaint)}
+                            lat={complaint.location.coordinates[1]}
+                            lng={complaint.location.coordinates[0]}
+                            onComplaintClick={() => this.handleComplaintClick(complaint)}
+                        />
+                    ))}
             
-                <div id="map-container">
-                    <GoogleMapReact 
-                    id="googleMap"
-                    
-                        bootstrapURLKeys={{
-                            key: "AIzaSyBcCGZr6R8jHxcmRoMtwD6vkUDAw-ceXDU"
-                        }}
-                        onChange={this.onMapChange}
-                        {...defaultOptions}
-                        {...mapOptions}
-                    >
-                        {complaints.filter(this.filteredComplaints).slice(0, 501).map(complaint => (
-                            <ComplaintMarker
-                                selected={complaint.unique_key === selectedComplaintId}
-                                complaint={complaint}
-                                image={`https://i.pinimg.com/originals/53/ec/92/53ec929800d1282c9ef59cd27c8c45d6.jpg`}
-                                lat={complaint.location.coordinates[1]}
-                                lng={complaint.location.coordinates[0]}
-                                onComplaintClick={() => this.handleComplaintClick(complaint)}
-                            />
-                        ))}
                     </GoogleMapReact>
                     <div id='checklist'>
                         <ul >
@@ -166,6 +166,7 @@ class Map extends React.Component {
                         </ul>
                     </div>
                 </div>
+                
            
 
         );
