@@ -27,28 +27,28 @@ class NeighborGood extends React.Component {
     }
 
 
-    
+
 
     handleMap = () => {
         const { SelectedComplaint } = this.state
         return (
             <div id="MapPage">
-                <h1 class="title">NeighborGood</h1>
-                <Map onComplaintClick={this.handleComplaint} />
-                {SelectedComplaint ? ComplaintInfo(SelectedComplaint) : <strong id='complaintinfo'> Choose a complaint </strong>}
+                <div id='map-title'><h1>NeighborGood</h1></div>
+                <div id='map-container'><Map onComplaintClick={this.handleComplaint} /></div>
+                <div id='complaint'>{SelectedComplaint ? ComplaintInfo(SelectedComplaint) : <strong id='complaintinfo'> Choose a complaint </strong>}</div>
             </div>
         )
     }
 
     handleHome = () => {
         return (
-          <Home />
+            <Home />
         )
     }
 
     handleFeed = () => {
         return (
-            
+
             <Feed />
         )
     }

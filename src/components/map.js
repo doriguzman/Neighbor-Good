@@ -113,10 +113,11 @@ class Map extends React.Component {
         const { complaints, mapOptions, selectedComplaintId } = this.state;
         console.log(this.state.ComplaintsObj)
         return (
-            <div id="map-container">
+            <div id='map-content'>
                 <div id='map'>
-                        <Key />
-                    
+                    <div id='key'>
+                    <Key />    
+                    </div>
                     <GoogleMapReact
                         id="googleMap"
                         bootstrapURLKeys={{
