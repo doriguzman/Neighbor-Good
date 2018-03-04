@@ -121,7 +121,7 @@ class Map extends React.Component {
 
         return (
             <div id="map-container">
-                <GoogleMapReact
+                <GoogleMapReact id='map'
                     bootstrapURLKeys={{
                         key: "AIzaSyBcCGZr6R8jHxcmRoMtwD6vkUDAw-ceXDU"
                     }}
