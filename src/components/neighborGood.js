@@ -5,7 +5,7 @@ import Map from './map'
 import Home from './Home/Home'
 import ComplaintInfo from './complaintInfo'
 import Feed from './Feed'
-
+import './complaintMarker.css'
 
 
 
@@ -47,6 +47,7 @@ class NeighborGood extends React.Component {
 
     handleFeed = () => {
         return (
+            
             <Feed />
         )
     }
