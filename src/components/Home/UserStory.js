@@ -13,6 +13,7 @@ const styles = {
     height: "10em",
     borderRadius: '8em'
   }
+ 
 };
 
 const UserStory = ({ users }) => {
@@ -21,8 +22,8 @@ const UserStory = ({ users }) => {
       {users.map(users =>
         <div class='userDiv' style={styles.container}>
           <img class='userImage' src={users.image} style={styles.img} />
-          <p class='userStory'> {users.user}{users.story} </p>
-          {users.user ? <p>Are you {users.user}? </p> : <p><a href='localhost/neighborgood/map'>Go to the map to find out!</a> </p>}
+          <pre class='userStory'> {users.user}{users.story} </pre>
+          {users.user ? <p>Are you {users.user}? </p> : <p id='last'><a href='localhost/neighborgood/map'>Go to the map to find out!</a> </p>}
 
         </div>
       )
