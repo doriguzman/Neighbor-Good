@@ -64,20 +64,20 @@ class Home extends React.Component {
 
   render() {
     return (
-<div>   
-      <div className='homeback'>
+      <div>
+        <div className='homeback'>
           <div id='title'>
-          <h1> Welcome to NeighborGood </h1>
-          <h3> We want to help find the right neighborhood for you!</h3>
-         </div>
-      </div>
+            <h1> Welcome to NeighborGood </h1>
+            <h3> We want to help find the right neighborhood for you!</h3>
+          </div>
+        </div>
 
-      <div id='allStories'>
-        <UserStory users={this.users} />
-        <h3 style={styles.bottom}>Want to report an issue in your neighborhood? <a href='http://www1.nyc.gov/311/index.page'> Click Here</a></h3>
-      </div>
+        <div id='allStories'>
+          <UserStory users={this.users} />
+          <h3 style={styles.bottom}>Want to report an issue in your neighborhood? <a href='http://www1.nyc.gov/311/index.page'> Click Here</a></h3>
+        </div>
 
-    </div>
+      </div>
     )
   }
 
