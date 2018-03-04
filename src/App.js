@@ -8,9 +8,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav>
+
+      <nav >
           <Link to='/'>Home</Link>{" "}
-          <Link to='/NeighborGood/Map'>Map</Link>
+          <Link to='/NeighborGood/Map'>Map</Link>{" "}
+          <Link to='/NeighborGood/Feed'>Feed</Link>
+
         </nav>
         <Switch>
           <Route exact path='/' component={Home}/>

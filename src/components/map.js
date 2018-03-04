@@ -30,6 +30,9 @@ class Map extends React.Component {
                 Request_Large_Bulky_Item_Collection: false,
                 Graffiti: false,
                 Noise: false,
+                Taxi_Complaint: false,
+                Rodent: false,
+                Other: false,
             }
         
         }
@@ -38,7 +41,7 @@ class Map extends React.Component {
             'Department of Parks and Recreation', 'Department of Buildings', 'Department of Health and Mental Hygiene', 'Department of Sanitation']
         this.boroughs = ['BRONX', 'BROOKLYN', 'QUEENS', 'MANHATTAN', 'STATEN_ISLAND']
         this.months = ['', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
-        this.incidents = ["Illegal_Parking", "Street_Condition", "Request_Large_Bulky_Item_Collection", "Graffiti", "Noise"]
+        this.incidents = ["Illegal_Parking", "Street_Condition", "Request_Large_Bulky_Item_Collection", "Graffiti", "Noise", "Taxi_Complaint", "Rodent", "Other"]
     };
 
 
@@ -49,7 +52,6 @@ class Map extends React.Component {
                 console.log(`res.data`)
                 this.setState({
                     complaints: res.data.filter(complaint => complaint.location && complaint.location.coordinates),
-                    
                 });
             })
             .catch(err => {
@@ -91,7 +93,6 @@ class Map extends React.Component {
                 return true
             } else {
                 return Boroughs[complaint.borough.replace(/\s/g, '_')]
-                
             }
     }
 
@@ -139,7 +140,7 @@ class Map extends React.Component {
                     SELECT A BOROUGH: {" "}
                     {this.boroughs.map(borough => (
                         <li>
-                            {borough}
+                            {borough.split('_').join(' ')}
                             <input
                                 name={borough}
                                 type="checkbox"
@@ -153,7 +154,7 @@ class Map extends React.Component {
                     SELECT A COMPLAINT: {" "}
                     {this.incidents.map(incident => (
                         <li>
-                            {incident}
+                            {incident.split('_').join(' ')}
                             <input
                                 name={incident}
                                 type="checkbox"
