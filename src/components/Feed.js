@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import ComplaintInfo from './complaintInfo'
 import { Link, Route, Switch } from 'react-router-dom'
+import '../CSS/Feed.css'
 
 class Feed extends React.Component {
     constructor() {

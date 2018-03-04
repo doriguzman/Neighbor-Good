@@ -3,6 +3,7 @@ import GoogleMapReact from "google-map-react";
 import axios from "axios";
 import ComplaintMarker from './complaintMarker'
 import ComplaintPicture from './complaintPicture'
+import '../CSS/Map.css'
 
 const defaultOptions = {
     defaultCenter: { lat: 40.7128, lng: -73.9 },
