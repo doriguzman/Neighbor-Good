@@ -4,6 +4,7 @@ import { Link, Route, Switch } from 'react-router-dom'
 import Map from './map'
 import Home from './Home/Home'
 import ComplaintInfo from './complaintInfo'
+import Feed from './Feed'
 
 
 
@@ -45,6 +46,12 @@ class NeighborGood extends React.Component {
         )
     }
 
+    handleFeed = () => {
+        return (
+            <Feed />
+        )
+    }
+
 
 
 
@@ -53,7 +60,8 @@ class NeighborGood extends React.Component {
             <div>
                 <Switch>
                     <Route exact path='/NeighborGood' render={this.handleHome} />
-                    <Route exact path='/NeighborGood/map' render={this.handleMap} />
+                    <Route path='/NeighborGood/map' render={this.handleMap} />
+                    <Route path='/NeighborGood/feed' render={this.handleFeed} />
                 </Switch>
             </div>
         )
