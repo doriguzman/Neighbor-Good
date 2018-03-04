@@ -42,9 +42,9 @@ class Map extends React.Component {
 
     componentDidMount() {
         axios
-            .get("https://data.cityofnewyork.us/resource/fhrw-4uyv.json?$$app_token=YCxIsYgQo0t4M310jwJdkoMpC")
+            .get("https://data.cityofnewyork.us/resource/fhrw-4uyv.json?$$app_token=YCxIsYgQo0t4M310jwJdkoMpC&$limit=5000")
             .then(res => {
-                console.log(`res.data`)
+                console.log(`res.dataaaaa`, res.data)
                 this.setState({
                     complaints: res.data.filter(complaint => complaint.location && complaint.location.coordinates
                         && complaint.incident_address && complaint.park_borough),
@@ -112,7 +112,8 @@ class Map extends React.Component {
         console.log(this.state.ComplaintsObj)
         return (
             <div id="map-container">
-                <GoogleMapReact 
+                <GoogleMapReact
+                    id="googleMap" 
                     bootstrapURLKeys={{
                         key: "AIzaSyBcCGZr6R8jHxcmRoMtwD6vkUDAw-ceXDU"
                     }}

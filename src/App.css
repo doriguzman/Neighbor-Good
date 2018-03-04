@@ -4,15 +4,16 @@
   
 
   .homeback{
-    background-image: url('https://sandiegomagazine.com/San-Diego-Magazine/March-2015/Best-Neighborhoods-in-San-Diego/The-Affordability-Crisis/san-diego-house-for-sale.jpg');
-    height: 800px;
+    height: 700px;
     background-size: 100%;
-    opacity: 0.2px
+    opacity: 0.5px
   }
   
   #map-container {
     height: 500px;
-    width:670px;
+    width:100%;
+    display: flex;
+    justify-content: space-around;
     padding-top:20px;
   }
   
@@ -26,11 +27,17 @@
     right: 0;
     left: 0;
   }
-  
+
+  #googleMap {
+    width: 70%;
+    min-width: 10px;
+  }
   #titleCon{
-    width:700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
     text-align: center;
-    display: inline-block;
     padding-top:10px;
   }
   
@@ -68,7 +75,7 @@
    
   #checklist {
     /* border: solid 2px; */
-    width:350px;
+    width:30%;
     right:0px;
     top:104px;
     position: absolute
