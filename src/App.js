@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Switch, Route} from 'react-router-dom'; 
-import './App.css';
+import './CSS/App.css';
 import NeighborGood from './components/neighborGood'
 import Home from './components/Home/Home.js';
 

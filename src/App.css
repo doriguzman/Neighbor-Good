@@ -41,14 +41,6 @@ body{
   padding-top:10px;
 }
 
-<<<<<<< HEAD
-#map-container {
-  height: 400px;
-  width: 60%;
-  padding: 5px;
-  margin: 0 auto; 
-  
-=======
 nav {
   text-align: center;
   padding-top:5px;
@@ -62,7 +54,6 @@ nav {
 #link {
   padding-left: 5px;
   padding-right: 5px;
->>>>>>> ec6ca4523798b75f5d93c44462c6e29dbc2539c8
 }
 
 ul{
@@ -96,19 +87,8 @@ margin-top: 0;
 #complaintinfo{
   padding-top:10px;
 }
-<<<<<<< HEAD
-ul {
-  list-style-type: none;
-  margin-top: 50px;
-}
-
-#feed {
-  text-align: center;
-}
-=======
 
 .userDiv{
   display:inline-block;
 }
 
->>>>>>> ec6ca4523798b75f5d93c44462c6e29dbc2539c8

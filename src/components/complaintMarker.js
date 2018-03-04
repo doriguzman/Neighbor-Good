@@ -1,4 +1,7 @@
 import React from "react";
+import ComplaintPicture from './complaintPicture'
+
+
 
 
 const ComplaintMarker = ({ image, selected, onComplaintClick, complaint  }) => (
@@ -6,8 +9,8 @@ const ComplaintMarker = ({ image, selected, onComplaintClick, complaint  }) => (
     className={selected ? "complaint selected" : "complaint"}
     alt=""
     src={image}
-    width='10'
-    height='10'
+    width="10"
+    height='15'
     onClick={onComplaintClick}
   />
 );
