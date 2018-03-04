@@ -1,43 +1,89 @@
-.App {
-  text-align: center;
-}
-body {
-  background-color: steelblue;
-}
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-.link {
-  float: right;
-}
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
 
-.App-title {
-  font-size: 3em;
+  /* background-color:rgb(243, 240, 240); */
+  /* background-image: url('https://na.rdcpix.com/956655953/8ecb8b5c10a19ccbe1daba7bc38ec77cw-c293724xd-w685_h860_q80.jpg'); */
+  /* background-size: 100%; */
+  
+
+.homeback{
+  background-image: url('https://sandiegomagazine.com/San-Diego-Magazine/March-2015/Best-Neighborhoods-in-San-Diego/The-Affordability-Crisis/san-diego-house-for-sale.jpg');
+  height: 800px;
+  background-size: 100%
 }
 
 #map-container {
-  height: 400px;
-    padding: 5px;
-  margin: 5px; 
+  height: 500px;
+  width:670px;
+  padding-top:20px;
 }
 
+body{
+  text-align:center;
+}
 
-.title {
+#title {
+  /* display: inline-block; */
+  margin:auto;
+  right: 0;
+  left: 0;
+}
+
+#titleCon{
+  width:700px;
   text-align: center;
+  display: inline-block;
+  padding-top:10px;
 }
 
 nav {
   text-align: center;
+  padding-top:5px;
+  background-color: mintcream;
+  width:125px;
+  height:20px;
+  margin:auto;
+  right: 0;
+  left: 0;
 }
-ul {
-  list-style-type: none;
-  float: left;
+#link {
+  padding-left: 5px;
+  padding-right: 5px;
 }
+
+ul{
+list-style-type: none;
+}
+
+li{
+  text-align: right;
+  padding-right:20px;
+  padding-top:5px;
+}
+ 
+#checklist {
+  /* border: solid 2px; */
+  width:350px;
+  right:0px;
+  top:104px;
+  position: absolute
+}
+h1 {
+  text-align: center;
+  padding-top:10px;
+  margin-top: 0px;
+ 
+}
+
+#p1{
+margin-top: 0;
+}
+#complaintinfo{
+  padding-top:10px;
+}
+
+
+.userDiv{
+  display:inline-block;
+}
+
+

@@ -17,22 +17,33 @@ const styles = {
 class Home extends React.Component{
   constructor(){
     super();
-    this.users=[
+    this.users = [
       {
-        user:'Olga', 
-        story:` is getting older. She wanted to be able to walk around
-        and enjoy her day peacefully. She used our app to find a neighborhood that was clean and quiet!`, 
-        filterComplaint: 'Sanitation', 
-        image:'https://www.wpclipart.com/cartoon/people/women_cartoons/old_lady_cartoon.png'
-      }, 
+        user: 'Olga',
+        story: ` is getting older. 
+        She wanted to be able to walk around
+        and enjoy her day peacefully. 
+        She used our app to find 
+        a neighborhood 
+        that was clean and quiet!`,
+        filterComplaint: 'Sanitation',
+        image: 'https://www.wpclipart.com/cartoon/people/women_cartoons/old_lady_cartoon.png'
+      },
 
       {
-        user:'Quavo', 
-        story:' is a musician. He wanted to be able to practice his craft without worrying about noise sensitive neighbors. He used our app to find a neighborhood that had few to no noise complaints!', 
-        filterComplaint: '', 
-        image:'https://ih0.redbubble.net/image.402188121.9994/flat,800x800,070,f.u1.jpg'
+        user: 'Quavo',
+        story: ` is a musician.
+         He wanted to be able to
+         practice his craft 
+         without worrying about noise 
+         sensitive neighbors. 
+         He used our app to find a 
+         neighborhood that 
+         had few to no noise complaints!`,
+        filterComplaint: '',
+        image: 'https://ih0.redbubble.net/image.402188121.9994/flat,800x800,070,f.u1.jpg'
       },
-      
+
       {
         user:'Adam', 
         story:` is an avid sports car owner and wanted his cars to avoid possible damage.
@@ -50,27 +61,20 @@ class Home extends React.Component{
     ]
   }
 
-// handleClick = () => {
-// this.setState = {
-  
-// }
-// }
+ 
 
 render(){
   return(
     <div>
-      <div>
+      
     <h1> Welcome to NeighborGood! </h1>
     <UserStory users={this.users}/>
-    <div style={styles.bottom}>Want to report an issue in your neighborhood? <a href='http://www1.nyc.gov/311/index.page'> Click Here</a></div>
-
-</div>
+    <h3 style={styles.bottom}>Want to report an issue in your neighborhood? <a href='http://www1.nyc.gov/311/index.page'> Click Here</a></h3>
 
       </div>
-  )
-}
+    )
+  }
 
 }
-
 
 export default Home; 
