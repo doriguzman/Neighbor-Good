@@ -12,14 +12,12 @@ class App extends Component {
           <Link to='/'>Home</Link>{" "}
           <Link to='/NeighborGood/Map'>Map</Link>{" "}
           <Link to='/NeighborGood/Feed'>Feed</Link>
-
         </nav>
+      
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route path='/NeighborGood' component={NeighborGood}/>
         </Switch>
-        
-        
       </div>
     );
   }
