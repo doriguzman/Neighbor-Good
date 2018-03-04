@@ -118,7 +118,7 @@ class Map extends React.Component {
 
         return (
             <div id="map-container">
-                <GoogleMapReact id='map'
+                <GoogleMapReact 
                     bootstrapURLKeys={{
                         key: "AIzaSyBcCGZr6R8jHxcmRoMtwD6vkUDAw-ceXDU"
                     }}
@@ -141,7 +141,7 @@ class Map extends React.Component {
                     <strong>SELECT A BOROUGH: </strong> {" "}
                     <br />
                     {this.boroughs.map(borough => (
-                        <li id='li'>
+                        <li >
                             {borough.split('_').join(' ')}
                             <input
                                 name={borough}
