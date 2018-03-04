@@ -8,14 +8,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Switch>
-          <Route exact path='/' component={Home}/>
-        </Switch>
-        <nav>
+      <nav>
           <Link to='/'>Home</Link>{" "}
           <Link to='/NeighborGood/Map'>Map</Link>
         </nav>
-        <Route path='/NeighborGood' component={NeighborGood}/>
+        <Switch>
+          <Route exact path='/' component={Home}/>
+          <Route path='/NeighborGood' component={NeighborGood}/>
+        </Switch>
+        
+        
       </div>
     );
   }
