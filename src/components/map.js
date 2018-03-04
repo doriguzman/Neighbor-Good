@@ -1,7 +1,8 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
 import axios from "axios";
-import ComplaintMarker from './complaintMarker'
+import ComplaintMarker from './complaintMarker';
+import RecentComplaints from './recentcomplaints';
 
 const defaultOptions = {
     defaultCenter: { lat: 40.7128, lng: -73.9 },
@@ -163,7 +164,7 @@ class Map extends React.Component {
                         </li>
                     ))}
                 </ul>
-
+                    
             </div>
         );
     }

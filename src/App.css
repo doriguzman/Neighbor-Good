@@ -1,23 +1,23 @@
 .App {
   text-align: center;
 }
-body {
+/* body {
   background-color: steelblue;
-}
-
+} */
+/* 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
-}
+} */
 .link {
   float: right;
 }
-.App-header {
+/* .App-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
-}
+} */
 
 .App-title {
   font-size: 3em;
