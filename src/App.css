@@ -47,3 +47,8 @@ ul {
 #feed {
   text-align: center;
 }
+
+
+.userDiv {
+  border-right: 1px solid black;
+}

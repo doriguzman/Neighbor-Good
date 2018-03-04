@@ -11,4 +11,9 @@ const ComplaintInfo = (complaint) => {
             </div>
     )
 }
+
+
+
+
+
 export default ComplaintInfo

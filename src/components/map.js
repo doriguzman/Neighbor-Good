@@ -2,6 +2,7 @@ import React from "react";
 import GoogleMapReact from "google-map-react";
 import axios from "axios";
 import ComplaintMarker from './complaintMarker'
+import ComplaintPicture from './complaintPicture'
 
 const defaultOptions = {
     defaultCenter: { lat: 40.7128, lng: -73.9 },
@@ -15,7 +16,6 @@ class Map extends React.Component {
             mapOptions: defaultOptions,
             complaints: [],
             image: '',
-            filtered: [],
             selectedComplaintId: null,
             Boroughs: {
                 BRONX: false,
@@ -32,18 +32,17 @@ class Map extends React.Component {
                 Noise: false,
                 Taxi_Complaint: false,
                 Rodent: false,
-                Other: false,
             }
 
         }
         this.boroughs = ['BRONX', 'BROOKLYN', 'QUEENS', 'MANHATTAN', 'STATEN_ISLAND']
-        this.incidents = ["Illegal_Parking", "Street_Condition", "Request_Large_Bulky_Item_Collection", "Graffiti", "Noise", "Taxi_Complaint", "Rodent", "Other"]
+        this.incidents = ["Illegal_Parking", "Street_Condition", "Request_Large_Bulky_Item_Collection", "Graffiti", "Taxi_Complaint", "Rodent", "Noise_-_Residential", "Noise_-_Vehicle", "Noise_-_Commercial", "Damaged_Tree"]
     };
 
 
     componentDidMount() {
         axios
-            .get("https://data.cityofnewyork.us/resource/fhrw-4uyv.json")
+            .get("https://data.cityofnewyork.us/resource/fhrw-4uyv.json?$$app_token=YCxIsYgQo0t4M310jwJdkoMpC")
             .then(res => {
                 console.log(`res.data`)
                 this.setState({
@@ -110,6 +109,7 @@ class Map extends React.Component {
 
     render() {
         const { complaints, mapOptions, selectedComplaintId } = this.state;
+        console.log(this.state.ComplaintsObj)
         return (
             <div id="map-container">
                 <GoogleMapReact
@@ -124,13 +124,14 @@ class Map extends React.Component {
                         <ComplaintMarker
                             selected={complaint.unique_key === selectedComplaintId}
                             complaint={complaint}
-                            image={`https://i.pinimg.com/originals/53/ec/92/53ec929800d1282c9ef59cd27c8c45d6.jpg`}
+                            image={ComplaintPicture(complaint)}
                             lat={complaint.location.coordinates[1]}
                             lng={complaint.location.coordinates[0]}
                             onComplaintClick={() => this.handleComplaintClick(complaint)}
                         />
                     ))}
                 </GoogleMapReact>
+                <i>This information is provided by NYC Open Data 311</i>
                 <ul>
                     SELECT A BOROUGH: {" "}
                     {this.boroughs.map(borough => (

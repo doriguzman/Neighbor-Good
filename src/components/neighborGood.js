@@ -34,7 +34,6 @@ class NeighborGood extends React.Component {
                 <h1 className="title">311's Reported Complaints</h1>
                 {SelectedComplaint ? ComplaintInfo(SelectedComplaint) : <strong> Choose a complaint </strong>}
                 <Map onComplaintClick={this.handleComplaint} />
-                <i>This information is provided by NYC Open Data 311</i>
                 <br />
             </div>
         )
