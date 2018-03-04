@@ -25,8 +25,10 @@ body {
 
 #map-container {
   height: 400px;
-    padding: 5px;
-  margin: 5px; 
+  width: 60%;
+  padding: 5px;
+  margin: 0 auto; 
+  
 }
 
 
@@ -39,5 +41,9 @@ nav {
 }
 ul {
   list-style-type: none;
-  float: left;
+  margin-top: 50px;
+}
+
+#feed {
+  text-align: center;
 }

@@ -22,7 +22,7 @@ const UserStory = ({ users }) => {
         <div class='userDiv' style={styles.container}>
           <img class='userImage' src={users.image} style={styles.img} />
           <p class='userStory'> {users.user}{users.story} </p>
-          {users.user ? <p>Are you {users.user}? </p> : <p><a href='localhost/neighborgood/map'>Go to the map to find out!</a> </p>}
+          {users.user ? <p>Are you {users.user}? </p> : <p><Link to='/NeighborGood/Map'>Go to the map to find out!</Link> </p>}
 
         </div>
       )

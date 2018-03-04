@@ -5,7 +5,7 @@ import Map from './map'
 import Home from './Home/Home'
 import ComplaintInfo from './complaintInfo'
 import Feed from './Feed'
-
+import './complaintMarker.css'
 
 
 class NeighborGood extends React.Component {
@@ -34,6 +34,7 @@ class NeighborGood extends React.Component {
                 <h1 className="title">311's Reported Complaints</h1>
                 {SelectedComplaint ? ComplaintInfo(SelectedComplaint) : <strong> Choose a complaint </strong>}
                 <Map onComplaintClick={this.handleComplaint} />
+                <i>This information is provided by NYC Open Data 311</i>
                 <br />
             </div>
         )
@@ -47,6 +48,7 @@ class NeighborGood extends React.Component {
 
     handleFeed = () => {
         return (
+            
             <Feed />
         )
     }
