@@ -13,7 +13,9 @@ class App extends Component {
         </Switch>
         <nav>
           <Link to='/'>Home</Link>{" "}
-          <Link to='/NeighborGood/Map'>Map</Link>
+          <Link to='/NeighborGood/Map'>Map</Link>{" "}
+          <Link to='/NeighborGood/Feed'>Feed</Link>
+
         </nav>
         <Route path='/NeighborGood' component={NeighborGood}/>
       </div>
