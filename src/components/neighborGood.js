@@ -44,13 +44,21 @@ class NeighborGood extends React.Component {
         )
     }
 
+    handleFeed = () => {
+        return (
+            <div>
+                </div>
+        )
+    }
+
 
     render() {
         return (
             <div>
                 <Switch>
                     <Route exact path='/NeighborGood' render={this.handleHome} />
-                    <Route exact path='/NeighborGood/map' render={this.handleMap} />
+                    <Route path='/NeighborGood/map' render={this.handleMap} />
+                    <Route path='/NeighborGood/feed' render={this.handleFeed} />
                 </Switch>
             </div>
         )
