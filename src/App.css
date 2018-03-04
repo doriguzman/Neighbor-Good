@@ -26,26 +26,20 @@ body {
 #map-container {
   height: 500px;
   width:710px;
-  /* display: inline-block; */
-  /* float:left; */
-  /* height: 400px;
-    padding: 5px;
-  margin: 5px;  */
   padding-top:30px;
  
 }
 body{
   text-align:center;
 }
-
 #title {
+
   color:red;
   /* display: inline-block; */
   margin:auto;
   right: 0;
   left: 0;
 }
-
 #titleCon{
   width:700px;
   /* margin:20px 0px 100px 10px; */
@@ -64,15 +58,13 @@ nav {
   padding-left: 5px;
   padding-right: 5px;
 }
+ul{
+list-style: none;
+/* float:right; */
+}
+ 
 #checklist {
-  /* background-color: #eeeeee;; */
-  /* position: absolute;
-  right: 150px;
-  top:150px;
-  padding-top:20px;
-  /* border: solid 1px; */
-  /*height:550px;
-  width:326.75px */
+  
   right:0px;
   top:150px;
   position: absolute
@@ -91,21 +83,3 @@ h1 {
 #stories {
   text-align: center;
 }
-/* #complaintDesc #map-container{
-  padding-left:10px;
-
-} */
-/* #complaintDesc{
-  padding-bottom:10px;
-} */ 
-
-
-/* title ----- /* padding-left: 270px; */
-  /* position: absolute;
-  margin: auto;  */
-  /* top: 0; */
-/*text-align: center; */
-  /* width: 400px; */
-  /* font-size:x-large */
-  /* margin-left: auto; 
-  margin-right: auto */
