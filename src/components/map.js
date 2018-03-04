@@ -141,7 +141,7 @@ class Map extends React.Component {
                     <strong>SELECT A BOROUGH: </strong> {" "}
                     <br />
                     {this.boroughs.map(borough => (
-                        <li>
+                        <li id='li'>
                             {borough.split('_').join(' ')}
                             <input
                                 name={borough}

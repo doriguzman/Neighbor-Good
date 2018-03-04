@@ -1,31 +1,11 @@
-.App {
-  text-align: center;
-}
+
 body {
-  background-color: steelblue;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-.link {
-  float: right;
-}
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 3em;
+  background-color: rgba(122, 185, 236, 0.486);
 }
 
 #map-container {
   height: 500px;
-  width:710px;
+  width:670px;
   padding-top:30px;
  
 }
@@ -34,7 +14,7 @@ body{
 }
 #title {
 
-  color:red;
+ 
   /* display: inline-block; */
   margin:auto;
   right: 0;
@@ -45,7 +25,7 @@ body{
   /* margin:20px 0px 100px 10px; */
   text-align: center;
   display: inline-block;
-  padding-right:30px;
+  /* padding-right:40px; */
  
 }
 
@@ -59,12 +39,17 @@ nav {
   padding-right: 5px;
 }
 ul{
-list-style: none;
-/* float:right; */
+list-style-type: none;
+
+}
+li{
+  text-align: right;
+  padding-right:20px;
 }
  
 #checklist {
-  
+  /* border: solid 2px; */
+  width:350px;
   right:0px;
   top:150px;
   position: absolute
