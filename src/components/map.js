@@ -4,6 +4,7 @@ import axios from "axios";
 import ComplaintMarker from './complaintMarker'
 import ComplaintPicture from './complaintPicture'
 import '../CSS/Map.css'
+import Key from './key'
 
 const defaultOptions = {
     defaultCenter: { lat: 40.7128, lng: -73.9 },
@@ -112,58 +113,62 @@ class Map extends React.Component {
         const { complaints, mapOptions, selectedComplaintId } = this.state;
         console.log(this.state.ComplaintsObj)
         return (
-            <div id="map-container">
+            <div id='map-content'>
                 <div id='map'>
-                <GoogleMapReact
-                    bootstrapURLKeys={{
-                        key: "AIzaSyBcCGZr6R8jHxcmRoMtwD6vkUDAw-ceXDU"
-                    }}
-                    onChange={this.onMapChange}
-                    {...defaultOptions}
-                    {...mapOptions}
-                >
-                    {complaints.filter(this.filteredComplaints).slice(0, 501).map(complaint => (
-                        <ComplaintMarker
-                            selected={complaint.unique_key === selectedComplaintId}
-                            complaint={complaint}
-                            image={ComplaintPicture(complaint)}
-                            lat={complaint.location.coordinates[1]}
-                            lng={complaint.location.coordinates[0]}
-                            onComplaintClick={() => this.handleComplaintClick(complaint)}
-                        />
-                    ))}
-                </GoogleMapReact>
+                    <div id='key'>
+                    <Key />    
+                    </div>
+                    <GoogleMapReact
+                        id="googleMap"
+                        bootstrapURLKeys={{
+                            key: "AIzaSyBcCGZr6R8jHxcmRoMtwD6vkUDAw-ceXDU"
+                        }}
+                        onChange={this.onMapChange}
+                        {...defaultOptions}
+                        {...mapOptions}
+                    >
+                        {complaints.filter(this.filteredComplaints).slice(0, 501).map(complaint => (
+                            <ComplaintMarker
+                                selected={complaint.unique_key === selectedComplaintId}
+                                complaint={complaint}
+                                image={ComplaintPicture(complaint)}
+                                lat={complaint.location.coordinates[1]}
+                                lng={complaint.location.coordinates[0]}
+                                onComplaintClick={() => this.handleComplaintClick(complaint)}
+                            />
+                        ))}
+                    </GoogleMapReact>
                 </div>
                 <div id='checklist'>
-                <ul >
-                    <strong>SELECT A BOROUGH: </strong> {" "}
-                    <br />
-                    {this.boroughs.map(borough => (
-                        <li >
-                            {borough.split('_').join(' ')}
-                            <input
-                                name={borough}
-                                type="checkbox"
-                                checked={this.state.Boroughs[borough]}
-                                onChange={this.handleBoroughSelect}
-                            />
-                        </li>
-                    ))}
-                </ul>
-                <ul >
-                   <strong> SELECT A COMPLAINT: </strong> {" "}
-                    {this.incidents.map(incident => (
-                        <li>
-                            {incident.split('_').join(' ')}
-                            <input
-                                name={incident}
-                                type="checkbox"
-                                checked={this.state.ComplaintsObj[incident]}
-                                onChange={this.handleComplaintSelect}
-                            />
-                        </li>
-                    ))}
-                </ul>
+                    <ul>
+                        <strong class="selectHeader"> SELECT A BOROUGH: </strong> {" "}
+                        {this.boroughs.map(borough => (
+                            <li >
+                                <input
+                                    name={borough}
+                                    type="checkbox"
+                                    checked={this.state.Boroughs[borough]}
+                                    onChange={this.handleBoroughSelect}
+                                />
+                                {borough.split('_').join(' ')}
+                            </li>
+                        ))}
+                    </ul>
+
+                    <ul>
+                        <strong class="selectHeader"> SELECT A COMPLAINT: </strong> {" "}
+                        {this.incidents.map(incident => (
+                            <li>
+                                <input
+                                    name={incident}
+                                    type="checkbox"
+                                    checked={this.state.ComplaintsObj[incident]}
+                                    onChange={this.handleComplaintSelect}
+                                />
+                                {incident.split('_').join(' ')}
+                            </li>
+                        ))}
+                    </ul>
                 </div>
 
             </div>

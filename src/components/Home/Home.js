@@ -63,9 +63,10 @@ class Home extends React.Component {
 
   render() {
     return (
-<div>   
-      <div className='homeback'>
+      <div>
+        <div className='homeback'>
           <div id='title'>
+
           <div id='middleOfHome'>
           <h1> <strong>Welcome to NeighborGood </strong> </h1>
           <h3><strong> We want to help find the right neighborhood for you! </strong></h3>
