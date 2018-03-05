@@ -65,6 +65,9 @@ class Home extends React.Component {
     return (
       <div>
         <div className='homeback'>
+        
+
+        }
           <div id='title'>
 
           <div id='middleOfHome'>
