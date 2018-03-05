@@ -26,6 +26,8 @@
     font-size: 23px;
     color: white;
   }
+
+
   .userDiv{
     display:inline-block;
   }
@@ -47,3 +49,12 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+
+a{
+    color:white;
+    padding: 5px;
+    padding-bottom: 10px
+}
+a:hover{
+    background-color: lightblue;
+}
