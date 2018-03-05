@@ -39,6 +39,9 @@
  li{
   list-style-type: none; 
  }
+ li:hover{
+   background-color:lightblue
+ }
 
 .navlink-a{
   font-family: 'Montserrat', sans-serif;
@@ -56,7 +59,7 @@
 .navlink{
   background-color:gray;
   padding-top: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 55px;
 
 }
 
@@ -73,6 +76,9 @@
   float:left
 }
 
+#logoContainer:hover{
+background-color: lightblue;
+}
 .endbanner{
     margin:0;
   background-color: black;

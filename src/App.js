@@ -13,7 +13,7 @@ class App extends Component {
       <div id='thewholething'>
 
 <div id='navHolder'>
-<div>
+<div id='logoContainer'>
 <img id='logo' src='https://thumbs.dreamstime.com/b/neighborhood-icon-vector-suburban-silhouette-design-element-43699957.jpg' height='70px'/>
 <h2 id='logoName'> NeighborGood </h2>
 </div>
