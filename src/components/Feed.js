@@ -97,6 +97,7 @@ class Feed extends React.Component {
                 </div>
                 <br />
                 <br/>
+                <div id='zipCode'>
                 Enter a Zip Code: {" "}
             <input
                     type="text"
@@ -106,6 +107,7 @@ class Feed extends React.Component {
                     placeholder="eg. 10469"
                 />
             <button id= 'feedSubmit' onClick={this.handleSubmit}>Submit</button>
+            </div>
             {message} 
 
             <br/>
