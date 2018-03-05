@@ -13,9 +13,10 @@ class App extends Component {
       <div id='thewholething'>
 
 <div id='navHolder'>
-<div id='logoContainer'>
+<div id='logoContainer'><Link to='/'>
 <img id='logo' src='https://thumbs.dreamstime.com/b/neighborhood-icon-vector-suburban-silhouette-design-element-43699957.jpg' height='70px'/>
 <h2 id='logoName'> NeighborGood </h2>
+</Link>
 </div>
       <nav>
           <li class='navlink'> <Link class='navlink-a' to='/'>Home</Link>{" "} </li>
