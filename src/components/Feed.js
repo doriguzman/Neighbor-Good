@@ -67,9 +67,13 @@ class Feed extends React.Component {
             <div id='totalFeed'>
                 <div id='feedImage' > </div>
             <div id="feed">
+               
                 <h1 id='feedTitle'> Most Recent Complaints</h1>
+                <div id='streetEasy'>
                 <a href={`https://streeteasy.com/for-sale/nyc/status:open%7Czip:${userInput}?refined_search=true`} target="_blank">Find apartments On StreetEasy!</a>
+                </div>
                 <br />
+                <br/>
                 Enter a Zip Code: {" "}
             <input
                     type="text"
@@ -80,6 +84,8 @@ class Feed extends React.Component {
                 />
             <button id= 'feedSubmit' onClick={this.handleSubmit}>Submit</button>
             {message}
+            <br/>
+            <br/>
                 <ul id="feedList">
                     {feed.map(comp => (
                         <li>
