@@ -114,15 +114,18 @@ class Feed extends React.Component {
                     </div>
                     <br />
                     <br />
+                    <div id='zip-code'>
                     Enter a Zip Code: {" "}
-                    <input
+                    <input id='input'
                         type="text"
                         value={userInput}
                         onChange={this.handleUserInput}
                         id="inputBox"
-                        placeholder="eg. 10469"
+                        placeholder=" eg. 10469"
                     />
+                    
                     <button id='feedSubmit' onClick={this.handleSubmit}>Submit</button>
+                    </div>
                     {message}
 
                     <br />
@@ -130,6 +133,7 @@ class Feed extends React.Component {
                     <ul id="feedList">
                         {keys.map((key, index) =>
                          <li>Complaint:{" "}{key} <br /> Number of Complaints:{" "}{values[index]}
+                        
                              < hr />
                              </li>)}
                     </ul>
