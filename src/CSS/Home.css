@@ -14,7 +14,6 @@
     right: 0;
     left: 0;
     padding-top: 375px;
-
   }
 
   #middleOfHome{
@@ -34,9 +33,11 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 450;
     
+    
 }
   .endbanner{
     margin:0;
+    margin-top: 50px;
   background-color: black;
   color:white; 
   font-family: 'Montserrat', sans-serif;
