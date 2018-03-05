@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500');
+
 .homeback{
     background-image: url('https://sandiegomagazine.com/San-Diego-Magazine/March-2015/Best-Neighborhoods-in-San-Diego/The-Affordability-Crisis/san-diego-house-for-sale.jpg');
     height: 800px;
     background-size: 100%;
     background-repeat: no-repeat; 
+    
   
   }
   #title {
@@ -11,12 +14,31 @@
     right: 0;
     left: 0;
     padding-top: 375px;
+
   }
 
-
+  #middleOfHome{
+    width: 50%;
+    margin-left: 25%;
+    background: rgba(138, 135, 135, 0.5);
+    font-family: 'Montserrat', sans-serif;
+  }
   .userDiv{
     display:inline-block;
   }
   body{
     text-align:center;
   }
+
+.userStory{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 450;
+    
+}
+  .endbanner{
+    margin:0;
+  background-color: black;
+  color:white; 
+  font-family: 'Montserrat', sans-serif;
+}
+
