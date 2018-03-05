@@ -2,12 +2,13 @@
 
 .homeback{
     background-image: url('https://sandiegomagazine.com/San-Diego-Magazine/March-2015/Best-Neighborhoods-in-San-Diego/The-Affordability-Crisis/san-diego-house-for-sale.jpg');
+    
     height: 800px;
     background-size: 100%;
     background-repeat: no-repeat; 
     
-  
   }
+
   #title {
     /* display: inline-block; */
     margin: auto;
@@ -17,10 +18,12 @@
   }
 
   #middleOfHome{
-    width: 50%;
+    width: 55%;
     margin-left: 25%;
-    background: rgba(138, 135, 135, 0.5);
+    background: rgba(95, 93, 93, 0.692);
     font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    color: white;
   }
   .userDiv{
     display:inline-block;
