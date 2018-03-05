@@ -1,13 +1,26 @@
+/* nav {
+  text-align: center;
+  padding-top:5px;
+  width:125px;
+  height:20px;
+  margin:auto;
+  right: 0;
+  left: 0;
+} */
+
+
 /* background-color:rgb(243, 240, 240); */
   /* background-image: url('https://na.rdcpix.com/956655953/8ecb8b5c10a19ccbe1daba7bc38ec77cw-c293724xd-w685_h860_q80.jpg'); */
   /* background-size: 100%; */
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700i');
 
   #thewholething {
     width: 100%;
   }
 
   #navHolder{
-    height:90px;
+    font-family: 'Montserrat', sans-serif;
+    height:75px;
     width: 100%;
     background-color: black;
     position:fixed;
@@ -15,9 +28,8 @@
     justify-content: space-between;
   }
  nav{
-    height: 40px;
+   
     background-color: black;
-    width:25%;
     display: flex;
     /* color: #C0BAB6; */
     /* margin-left: 330px; */
@@ -27,25 +39,30 @@
  li{
   list-style-type: none; 
  }
+ li:hover{
+   background-color:lightblue
+ }
 
 .navlink-a{
+  font-family: 'Montserrat', sans-serif;
   color:white;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
     letter-spacing: 1px;
-    color: #444;
+    color: white;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 500;
     padding-left: 20px;
-    padding-right:30px
+    padding-right:30px;
+  
 }
 
 .navlink{
-  background-color:gray;
-  padding-top: 30px;
-    padding-bottom: 60px;
-}
+  
+  padding-top: 20px;
+    padding-bottom: 55px;
 
+}
 
  
 #logo{
@@ -54,9 +71,19 @@
 }
 #logoName{
   color:white;
-  margin-top:30px; 
+  margin-top:20px; 
   /* margin-left:8px; */
   margin-bottom:40px;
   float:left
 }
 
+#logoContainer:hover{
+background-color: lightblue;
+}
+.endbanner{
+  padding-bottom:10px;
+  padding-top:10px;
+  background-color: black;
+  color:white; 
+  text-decoration: none;
+}

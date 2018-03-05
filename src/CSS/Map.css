@@ -1,3 +1,112 @@
+/* background-color:rgb(243, 240, 240); */
+  /* background-image: url('https://na.rdcpix.com/956655953/8ecb8b5c10a19ccbe1daba7bc38ec77cw-c293724xd-w685_h860_q80.jpg'); */
+  /* background-size: 100%; */
+
+  /* Map stuff */
+  /* #map-container {
+    height: 500px;
+    width:70%;
+    display: flex;
+    justify-content: space-around; */
+    /* padding-top:60px; */
+    /* padding-left: 20px;
+    
+  }
+  #googleMap {
+    width: 70%;
+    min-width: 10px;
+    
+  } */
+/* 
+ html {
+     background-color: yellow;
+ }
+   */
+
+
+  /* title stuff */
+
+
+  /* h1 {
+    text-align: center;
+    padding-top:10px;
+    margin-top: 0px;
+  }
+  
+
+  .title {  */
+   /* display: inline-block; */
+    /* margin:auto;
+    right: 0;
+    left: 0;
+    color: 'red'
+   } 
+
+
+  #titleCon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    text-align: center;
+    padding-top:10px;
+  } */
+
+  
+/* list stuff */
+/* 
+.selectHeader {
+    display: flex;
+    justify-content: center;
+} 
+  
+  ul{
+  list-style-type: none;
+  }
+   
+   li{
+    text-align: left;
+    padding-right:20px;
+    padding-top:5px;
+  } */
+     
+  /* #checklist { */
+     /* width:30%;
+     right:0px;
+     top:75px;  */
+     /* border: solid 2px; */
+     /* position: absolute */
+     /* width:30%;
+     right:0px;
+     top:104px;
+     position: absolute
+   }  */
+
+
+
+
+  /* complaint box stuff */
+
+
+  /* #complaintinfo{
+    padding-top:5px;
+    padding-left: 20px;
+  } */
+
+  /* key  */
+
+  /* #key li{
+      display: inline;
+      font-size: 10px;
+      background-color: darkgrey
+  } */
+
+ /* using straight flex box */
+
+/* 
+#MapPage {
+    display: flex;
+    flex-direction: column;
 #mapPage {
     display: flex;
     flex-direction: column;
@@ -44,3 +153,4 @@ li {
     padding-right: 5px;
 }
 
+*/

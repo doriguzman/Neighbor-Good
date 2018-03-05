@@ -10,7 +10,8 @@ class Feed extends React.Component {
         this.state = {
             feed: [],
             userInput: '',
-            message: ''
+            message: '', 
+            clicked:false
         }
         this.filtered = []
         this.count = 0
@@ -56,15 +57,19 @@ class Feed extends React.Component {
         console.log(`userrrrr`,userInput)
         if(userInput.length !== 5 || isNaN(userInput)) {
             this.setState({
-                message: 'Please enter 5 numbers'
+                message: 'Please enter 5 numbers', 
+                
             })
         } else {
             axios
             .get(`https://data.cityofnewyork.us/resource/fhrw-4uyv.json?$$app_token=YCxIsYgQo0t4M310jwJdkoMpC&$where=incident_zip='${userInput}'&$limit=200&$order=created_date DESC`)
             .then(res => {
-               this.setState({
-                   feed: res.data.filter(comp => comp.incident_zip && comp.incident_address && comp.complaint_type)
-               })
+                console.log(`resawrgargwa`, res)
+                this.setState({
+                    feed: res.data.filter(complaint => complaint.incident_zip && complaint.incident_address && comp.complaint_type),
+                    message: '', 
+                    clicked:true
+                })
             })
             .catch(err => {
                 console.log(`err in handle submit`, err)
@@ -77,13 +82,20 @@ class Feed extends React.Component {
     }
 
     render() {
-        const { feed, userInput, message } = this.state
-        console.log(`feedder`, this.removeDuplicatesObj(feed))
+        const { feed, userInput, message, clicked } = this.state
+        
+        console.log(this.state)
         return (
+            <div id='totalFeed'>
+                <div id='feedImage' > </div>
             <div id="feed">
-                <h1>Most Recent Complaints</h1>
-                <a href={`https://streeteasy.com/for-sale/nyc/status:open%7Czip:${userInput}?refined_search=true`} target="_blank">Find apartments On StreetEasy!</a>
+               
+                <h1 id='feedTitle'> Most Recent Complaints</h1>
+                <div id='streetEasy'>
+                {clicked ? <a href={`https://streeteasy.com/for-sale/nyc/status:open%7Czip:${userInput}?refined_search=true`} target="_blank">Find apartments On StreetEasy!</a>: ''}
+                </div>
                 <br />
+                <br/>
                 Enter a Zip Code: {" "}
             <input
                     type="text"
@@ -92,8 +104,11 @@ class Feed extends React.Component {
                     id="inputBox"
                     placeholder="eg. 10469"
                 />
-            <button onClick={this.handleSubmit}>Submit</button>
-            {message}
+            <button id= 'feedSubmit' onClick={this.handleSubmit}>Submit</button>
+            {message} 
+
+            <br/>
+            <br/>
                 <ul id="feedList">
                     {this.removeDuplicatesObj(feed).map(comp => (
                         <li>
@@ -105,6 +120,7 @@ class Feed extends React.Component {
                     ))}
                 </ul>
                 
+                </div>
             </div>
         )
     }
