@@ -102,61 +102,63 @@
   } */
 
  /* using straight flex box */
-
-
-/* #MapPage {
-    display: flex;
-    flex-direction: column;}
-#mapPage {
-    display: flex;
-    flex-direction: column;
-    padding-top: 100px;
-    height: 100%;
-}
-
-#map-container {
-    display: flex;
-    flex-direction: row;
-    background-color: red;
+ @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700i');
+/* html{
+    
+    
 } */
-
 #MapPage {
     display: flex;
-    flex-direction: column;}
+    flex-direction: column;
+    
+}
 #mapPage {
     display: flex;
     flex-direction: column;
     padding-top: 100px;
     height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    
 }
+
 #map-content {
     display: flex;
     flex-direction: row;
 }
+
 #map {
     display: flex;
     flex-direction: column;
     width: 85%;
     padding-left: 20px;
 }
+
 #googleMap {
     height: 100%;
 }
+
 #key-component {
     height: 10%;
 }
+
 #key li {
     display: inline;
     font-size: small;
     justify-content: flex-start;
+    font-family: 'Montserrat', sans-serif;
 }
+
 #checklist li {
    justify-content: left;
+   font-family: 'Montserrat', sans-serif;
 }
+
 #complaint {
     padding-top: 70px;
     padding-right: 275px;
+    font-family: 'Montserrat', sans-serif;
 }
+
 li {
     padding-right: 5px;
 }

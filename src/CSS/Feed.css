@@ -11,17 +11,18 @@
     
     /* padding-bottom: 148px; */
 }
-
+html{
+    margin:0;
+    width:100%;
+    background-color: #D9E5D6
+  }
 #feed { 
     font-family: 'Montserrat', sans-serif;
-        background-repeat: no-repeat; 
-       
-        background-color: #D9E5D6;
-        }
+    background-repeat: no-repeat; 
+    background-color: #D9E5D6;
+}
 
-/* #inputBox {
 
-} */
 #feedList {
     float: center;
     background-color: #D9E5D6;
@@ -38,6 +39,6 @@ font-weight: bold;
    font-size: 50px;
    font-family: 'Montserrat', sans-serif;
 }
-a{
+a {
     padding:10px;
 }
