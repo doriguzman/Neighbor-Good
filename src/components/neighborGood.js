@@ -54,7 +54,6 @@ class NeighborGood extends React.Component {
 
     render() {
         const { SelectedComplaint } = this.state
-        console.log(`yay i  made it `, SelectedComplaint)
         return (
             <div >
                 <Switch>
