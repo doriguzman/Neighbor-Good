@@ -1,4 +1,20 @@
-#feed { font-family: 'Karma', serif; }
+#totalFeed{
+    padding-top: 1200x;
+}
+#feedImage {
+    height: 600px;
+    width:100%;
+    background-image: url('Neighborhood.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#feed { font-family: 'Karma', serif;
+        
+        background-repeat: no-repeat; 
+        font-family: 'Open Sans',
+        sans-serif;
+        }
 
 #inputBox {
 
@@ -7,6 +23,8 @@
     float: center;
 }
 
-#feedSubmit {
-
+#feedSubmit:hover {
+color: grey;
+font-weight: bold;
 }
+
