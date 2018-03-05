@@ -13,11 +13,11 @@ const ComplaintPicture = (complaint) => {
         case "Taxi Complaint":
             return "http://coloringhub.com/wp-content/uploads/2014/01/taxi-vector.png"
         case "Graffiti":
-            return "https://cdn.pixabay.com/photo/2016/12/28/07/46/graffiti-1935630_1280.png"
+            return "http://moziru.com/images/graffiti-clipart-graffiti-spray-can-clipart-2.png"
         case "Request Large Bulky Item Collection":
             return "http://moziru.com/images/trash-clipart-cartoon-20.png"
         case "Street Condition":
-            return "https://www.clker.com/cliparts/1/c/2/a/1197089I0841431512955Milkman666_Cone.svg.svg.med.png"
+            return "https://www.clker.com/cliparts/1/c/2/a/11970890841431512955Milkman666_Cone.svg.svg"
         case "Illegal Parking":
             return "https://marketplace.canva.com/MACFv2ngAV8/1/thumbnail_large/canva-no-parking-signal-MACFv2ngAV8.png"
         case "Damaged Tree":

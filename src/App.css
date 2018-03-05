@@ -2,7 +2,7 @@
   /* background-image: url('https://na.rdcpix.com/956655953/8ecb8b5c10a19ccbe1daba7bc38ec77cw-c293724xd-w685_h860_q80.jpg'); */
   /* background-size: 100%; */
   
-
+/* 
   .homeback{
     height: 700px;
     background-size: 100%;
@@ -22,7 +22,7 @@
   }
   
   #title {
-    /* display: inline-block; */
+   
     margin:auto;
     right: 0;
     left: 0;
@@ -39,7 +39,7 @@
     width:100%;
     text-align: center;
     padding-top:10px;
-  }
+  } */
   
   /* #map-container {
     height: 400px;
@@ -48,7 +48,7 @@
     margin: 0 auto; 
   } */
   
-  nav {
+  /* nav {
     text-align: center;
     padding-top:5px;
     background-color: mintcream;
@@ -71,10 +71,10 @@
     text-align: right;
     padding-right:20px;
     padding-top:5px;
-  }
+  } */
    
-  #checklist {
-    /* border: solid 2px; */
+  /* #checklist {
+   
     width:30%;
     right:0px;
     top:104px;
@@ -92,7 +92,7 @@
   }
   #complaintinfo{
     padding-top:10px;
-  }
+  } */
   /* ul {
     list-style-type: none;
     margin-top: 50px;
@@ -102,10 +102,10 @@
     text-align: center;
   } */
   
-  .userDiv{
+  /* .userDiv{
     display:inline-block;
   }
   
   .homeback #Map{
     background-color: white
-  } 
+  }  */

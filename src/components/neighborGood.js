@@ -6,6 +6,7 @@ import Home from './Home/Home'
 import ComplaintInfo from './complaintInfo'
 import Feed from './Feed'
 import './complaintMarker.css'
+import Key from './key'
 
 
 
@@ -31,11 +32,10 @@ class NeighborGood extends React.Component {
     handleMap = () => {
         const { SelectedComplaint } = this.state
         return (
-            <div id='titleCon'>
-                <h1 id="title">NeighborGood</h1>
+            <div id="MapPage">
+                <h1 class="title">NeighborGood</h1>
                 <Map onComplaintClick={this.handleComplaint} />
-                {SelectedComplaint ? ComplaintInfo(SelectedComplaint) : <strong id='compDes'> Choose a complaint </strong>}
-                <br />
+                {SelectedComplaint ? ComplaintInfo(SelectedComplaint) : <strong id='complaintinfo'> Choose a complaint </strong>}
             </div>
         )
     }

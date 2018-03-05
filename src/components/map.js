@@ -4,6 +4,7 @@ import axios from "axios";
 import ComplaintMarker from './complaintMarker'
 import ComplaintPicture from './complaintPicture'
 import '../CSS/Map.css'
+import '../CSS/App.css';
 
 const defaultOptions = {
     defaultCenter: { lat: 40.7128, lng: -73.9 },
@@ -113,8 +114,8 @@ class Map extends React.Component {
         console.log(this.state.ComplaintsObj)
         return (
             <div id="map-container">
+                <div id='map'>
                 <GoogleMapReact
-                    id="googleMap" 
                     bootstrapURLKeys={{
                         key: "AIzaSyBcCGZr6R8jHxcmRoMtwD6vkUDAw-ceXDU"
                     }}
@@ -132,105 +133,42 @@ class Map extends React.Component {
                             onComplaintClick={() => this.handleComplaintClick(complaint)}
                         />
                     ))}
-            
-                    </GoogleMapReact>
-                    <div id='checklist'>
-                        <ul >
-                            <strong>SELECT A BOROUGH: </strong> {" "}
-                            <br />
-                            {this.boroughs.map(borough => (
-                                <li >
-                                    {borough.split('_').join(' ')}
-                                    <input
-                                        name={borough}
-                                        type="checkbox"
-                                        checked={this.state.Boroughs[borough]}
-                                        onChange={this.handleBoroughSelect}
-                                    />
-                                </li>
-                            ))}
-                        </ul>
-                        <ul >
-                            <strong> SELECT A COMPLAINT: </strong> {" "}
-                            {this.incidents.map(incident => (
-                                <li>
-                                    {incident.split('_').join(' ')}
-                                    <input
-                                        name={incident}
-                                        type="checkbox"
-                                        checked={this.state.ComplaintsObj[incident]}
-                                        onChange={this.handleComplaintSelect}
-                                    />
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                </GoogleMapReact>
                 </div>
-                
-           
-
+                <div id='checklist'>
+                <ul >
+                    <strong>SELECT A BOROUGH: </strong> {" "}
+                    <br />
+                    {this.boroughs.map(borough => (
+                        <li >
+                            {borough.split('_').join(' ')}
+                            <input
+                                name={borough}
+                                type="checkbox"
+                                checked={this.state.Boroughs[borough]}
+                                onChange={this.handleBoroughSelect}
+                            />
+                        </li>
+                    ))}
+                </ul>
+                <ul >
+                   <strong> SELECT A COMPLAINT: </strong> {" "}
+                    {this.incidents.map(incident => (
+                        <li>
+                            {incident.split('_').join(' ')}
+                            <input
+                                name={incident}
+                                type="checkbox"
+                                checked={this.state.ComplaintsObj[incident]}
+                                onChange={this.handleComplaintSelect}
+                            />
+                        </li>
+                    ))}
+                </ul>
+                </div>
+            </div>
         );
     }
 }
 
 export default Map;
-
-
-
-
-
-
-
-// selectAgency: '',
-// selectBorough: '',
-// selectMonth: '',
-
-
-
-// handleSelectBorough = (e) => {
-//     const { complaints, selectAgency } = this.state
-//     this.setState({
-//         selectBorough: e.target.value,
-//         filtered: complaints.filter(complaint => complaint.agency_name.includes(selectAgency) && complaint.borough.includes(e.target.value))
-//     })
-// }
-
-// handleSelectMonth = (e) => {
-//     const { complaints, selectAgency, selectBorough } = this.state
-//     this.setState({
-//         selectMonth: e.target.value,
-//         filtered: complaints.filter(complaint => complaint.agency_name.includes(selectAgency) && complaint.borough.includes(selectBorough) && complaint.created_date.split('-')[1].includes(e.target.value))
-//     })
-// }
-
-
-
-// handleSelectAgency = (e) => {
-//     const { complaints, selectBorough } = this.state
-//     this.setState({
-//         selectAgency: e.target.value,
-//         filtered: complaints.filter(complaint => complaint.agency_name.includes(e.target.value) && complaint.borough.includes(selectBorough))
-//     })
-// }
-
-
-
-
-
-
-// Select an Agency: {" "}
-// <select id="filter" onChange={this.handleSelectAgency} value={selectAgency}>
-//     {this.agencies.map(opt =>
-//         <option>{opt}</option>)}
-// </select>
-// <br />
-// Select a borough: {" "}
-// <select id='filter' onChange={this.handleSelectBorough} value={selectBorough} >
-//     {this.boroughs.map(opt =>
-//         <option>{opt}</option>)}
-// </select>
-// <br />
-// Select a Month: {" "}
-// <select id='filter' value={selectMonth} onChange={this.handleSelectMonth}>
-//     {this.months.map(month => <option>{month}</option>)}
-// </select>

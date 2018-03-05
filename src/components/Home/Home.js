@@ -2,6 +2,19 @@ import React, { Component } from 'react';
 import UserStory from './UserStory';
 import '../../CSS/Home.css'
 
+
+const styles = {
+
+  bottom: {
+
+    position: 'absolute',
+    // bottom:'0px',
+    width: '100%',
+    height: '60px',
+
+  }
+};
+
 class Home extends React.Component {
   constructor() {
     super();
@@ -66,21 +79,27 @@ class Home extends React.Component {
 
   render() {
     return (
-      
-      <div className='homeback'  >
-      {/* <img className='homebackpic' src='https://sandiegomagazine.com/San-Diego-Magazine/March-2015/Best-Neighborhoods-in-San-Diego/The-Affordability-Crisis/san-diego-house-for-sale.jpg' /> */}
-        <div className='background'> </div>
-        <h1> Welcome to NeighborGood! </h1>
+<div>   
+      <div className='homeback'>
+          <div id='title'>
+          <div id='middleOfHome'>
+          <h1> Welcome to NeighborGood </h1>
+          <h3> We want to help find the right neighborhood for you!</h3>
+         </div>
+          </div>
+      </div>
+
+      <div id='allStories'>
         <UserStory users={this.users} />
-        <span>Want to report an issue in your neighborhood? <a href='http://www1.nyc.gov/311/index.page'> Click Here</a></span>
-
-
 
       </div>
+      <div class='endbanner'>
+      <h3 class='endbanner' style={styles.bottom}>Want to report an issue in your neighborhood? <a href='http://www1.nyc.gov/311/index.page'> Click Here</a></h3>
+      </div>
+    </div>
     )
   }
 
 }
 
-
-export default Home; 
+export default Home;
