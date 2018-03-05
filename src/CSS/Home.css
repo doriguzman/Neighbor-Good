@@ -50,11 +50,11 @@
 }
 
 
-a{
+#report{
     color:white;
     padding: 5px;
     padding-bottom: 10px
 }
-a:hover{
+#report:hover{
     background-color: lightblue;
 }
