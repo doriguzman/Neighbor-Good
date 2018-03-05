@@ -1,4 +1,4 @@
-background-color:rgb(243, 240, 240); */
+/* background-color:rgb(243, 240, 240);  */
   /* background-image: url('https://na.rdcpix.com/956655953/8ecb8b5c10a19ccbe1daba7bc38ec77cw-c293724xd-w685_h860_q80.jpg'); */
   /* background-size: 100%; */
 
@@ -101,20 +101,25 @@ background-color:rgb(243, 240, 240); */
       background-color: darkgrey
   } */
 
- /* using straight flex box */ 
+ /* using straight flex box */
+ @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700i');
 
- 
-#MapPage {
-    display: flex;
-    flex-direction: column;
-}
+
+
+
 #mapPage {
     display: flex;
     flex-direction: column;
     padding-top: 100px;
     height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    
 }
 
+#map-title{
+
+padding-bottom: 15px;
+}
 #map-content {
     display: flex;
     flex-direction: row;
@@ -131,6 +136,10 @@ background-color:rgb(243, 240, 240); */
     height: 100%;
 }
 
+#keyImage{
+  padding-right:5px;
+  padding-left:5px
+}
 #key-component {
     height: 10%;
 }
@@ -139,18 +148,23 @@ background-color:rgb(243, 240, 240); */
     display: inline;
     font-size: small;
     justify-content: flex-start;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #checklist li {
+   display:flex;
    justify-content: left;
+   font-family: 'Montserrat', sans-serif;
+   
 }
+
 
 #complaint {
     padding-top: 70px;
     padding-right: 275px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 li {
     padding-right: 5px;
 }
-

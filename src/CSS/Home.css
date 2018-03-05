@@ -25,6 +25,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 23px;
     color: white;
+    text-shadow: -1px 0 1px #000;
   }
 
 
@@ -39,7 +40,10 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 450;
     
-    
+}
+
+#userUnknown{
+    color:black;
 }
   .endbanner{
     margin-bottom:0;
@@ -53,7 +57,8 @@
 #report{
     color:white;
     padding: 5px;
-    padding-bottom: 10px
+    padding-bottom: 10px;
+    padding-top:10px
 }
 #report:hover{
     background-color: lightblue;
