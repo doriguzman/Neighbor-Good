@@ -143,7 +143,7 @@ class Map extends React.Component {
                     </div>
                 </div>
                 <div id='checklist'>
-                    <ul>
+                    <ul >
                         <strong class="selectHeader"> SELECT A BOROUGH: </strong> {" "}
                         {this.boroughs.map(borough => (
                             <li >
