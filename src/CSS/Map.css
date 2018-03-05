@@ -1,4 +1,4 @@
-/* background-color:rgb(243, 240, 240); */
+/* background-color:rgb(243, 240, 240);  */
   /* background-image: url('https://na.rdcpix.com/956655953/8ecb8b5c10a19ccbe1daba7bc38ec77cw-c293724xd-w685_h860_q80.jpg'); */
   /* background-size: 100%; */
 
@@ -80,7 +80,7 @@
      right:0px;
      top:104px;
      position: absolute
-   }  */
+   } 
 
 
 
@@ -103,16 +103,9 @@
 
  /* using straight flex box */
  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700i');
-/* html{
-    
-    
-} */
 
-#MapPage {
-    display: flex;
-    flex-direction: column;
-    
-}
+
+
 
 #mapPage {
     display: flex;
