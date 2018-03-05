@@ -10,8 +10,8 @@ class Feed extends React.Component {
         this.state = {
             feed: [],
             userInput: '',
-            message: '', 
-            clicked:false
+            message: '',
+            clicked: false
         }
         this.filtered = []
         this.count = 0
@@ -23,8 +23,7 @@ class Feed extends React.Component {
             .get(`https://data.cityofnewyork.us/resource/fhrw-4uyv.json?$$app_token=YCxIsYgQo0t4M310jwJdkoMpC`)
             .then(res => {
                 this.setState({
-                    feed: res.data.filter(complaint => complaint.incident_zip && complaint.incident_address),
-                    filtered: res.data.filter(complaint => complaint.incident_zip && complaint.incident_address)
+                    feed: res.data.filter(complaint => complaint.incident_zip && complaint.incident_address && complaint.complaint_type),
                 })
             })
             .catch(err => {
@@ -39,87 +38,101 @@ class Feed extends React.Component {
     }
 
 
-    removeDuplicatesObj = (arr) => {
-        var newArr = []
-        // console.log(`arrrrr`,arr)
-        for(var i = 0; i <= arr.length; i++) {
-          if(typeof arr[i] === 'object') {
-             
-          }
+    //     removeDuplicatesObj = (arr) => {
+    //         var newArr = []
+    //         for(var i = 0; i <= arr.length; i++) {
+    //           if(typeof arr[i] === 'object') {
+    //               if(!newArr.includes(arr[i].complaint_type)){
+    //                   c
+    //               }
+    //         }  
+    //     }
+    //     console.log(`newArr`, newArr)
+    //     return newArr
+    // }
+
+    removeDuplicatesV2 = (arr) => {
+        let output = {};
+        for (let i = 0; i < arr.length; i++) {
+            let ltr = arr[i].complaint_type;
+            if (output[ltr]) {
+                output[ltr] += 1;
+            } else {
+                output[ltr] = 1;
+            }
         }
-        console.log(`newArr`, newArr)
-        return newArr
+        return output
     }
+
+
+
 
 
     handleSubmit = (e) => {
         const { userInput } = this.state
-        console.log(`userrrrr`,userInput)
-        if(userInput.length !== 5 || isNaN(userInput)) {
+        console.log(`userrrrr`, userInput)
+        if (userInput.length !== 5 || isNaN(userInput)) {
             this.setState({
-                message: 'Please enter 5 numbers', 
-                
+                message: 'Please enter 5 numbers',
+
             })
         } else {
             axios
-            .get(`https://data.cityofnewyork.us/resource/fhrw-4uyv.json?$$app_token=YCxIsYgQo0t4M310jwJdkoMpC&$where=incident_zip='${userInput}'&$limit=200&$order=created_date DESC`)
-            .then(res => {
-                console.log(`resawrgargwa`, res)
-                this.setState({
-                    feed: res.data.filter(complaint => complaint.incident_zip && complaint.incident_address && comp.complaint_type),
-                    message: '', 
-                    clicked:true
+                .get(`https://data.cityofnewyork.us/resource/fhrw-4uyv.json?$$app_token=YCxIsYgQo0t4M310jwJdkoMpC&$where=incident_zip='${userInput}'&$limit=200&$order=created_date DESC`)
+                .then(res => {
+                    console.log(`resawrgargwa`, res)
+                    this.setState({
+                        feed: res.data.filter(complaint => complaint.incident_zip && complaint.incident_address && complaint.complaint_type),
+                        message: '',
+                        clicked: true
+                    })
                 })
-            })
-            .catch(err => {
-                console.log(`err in handle submit`, err)
-                this.setState({
-                    message: 'Please enter a zip code'
+                .catch(err => {
+                    console.log(`err in handle submit`, err)
+                    this.setState({
+                        message: 'Please enter a zip code'
+                    })
                 })
-            })
         }
-        
+
     }
 
     render() {
         const { feed, userInput, message, clicked } = this.state
-        
-        console.log(this.state)
+        var keys = Object.keys(this.removeDuplicatesV2(feed))
+        var values = Object.values(this.removeDuplicatesV2(feed))
+
+        console.log(`feedfiltereds`, this.removeDuplicatesV2(feed))
         return (
             <div id='totalFeed'>
                 <div id='feedImage' > </div>
-            <div id="feed">
-               
-                <h1 id='feedTitle'> Most Recent Complaints</h1>
-                <div id='streetEasy'>
-                {clicked ? <a href={`https://streeteasy.com/for-sale/nyc/status:open%7Czip:${userInput}?refined_search=true`} target="_blank">Find apartments On StreetEasy!</a>: ''}
-                </div>
-                <br />
-                <br/>
-                Enter a Zip Code: {" "}
-            <input
-                    type="text"
-                    value={userInput}
-                    onChange={this.handleUserInput}
-                    id="inputBox"
-                    placeholder="eg. 10469"
-                />
-            <button id= 'feedSubmit' onClick={this.handleSubmit}>Submit</button>
-            {message} 
+                <div id="feed">
 
-            <br/>
-            <br/>
-                <ul id="feedList">
-                    {this.removeDuplicatesObj(feed).map(comp => (
-                        <li>
-                            Type: {comp.co}
-                            <br />
-                             Date: {comp.count}
-                            < hr />
-                        </li>
-                    ))}
-                </ul>
-                
+                    <h1 id='feedTitle'> Most Recent Complaints</h1>
+                    <div id='streetEasy'>
+                        {clicked ? <a href={`https://streeteasy.com/for-sale/nyc/status:open%7Czip:${userInput}?refined_search=true`} target="_blank">Find apartments On StreetEasy!</a> : ''}
+                    </div>
+                    <br />
+                    <br />
+                    Enter a Zip Code: {" "}
+                    <input
+                        type="text"
+                        value={userInput}
+                        onChange={this.handleUserInput}
+                        id="inputBox"
+                        placeholder="eg. 10469"
+                    />
+                    <button id='feedSubmit' onClick={this.handleSubmit}>Submit</button>
+                    {message}
+
+                    <br />
+                    <br />
+                    <ul id="feedList">
+                        {keys.map((key, index) =>
+                         <li>Complaint:{" "}{key} <br /> Number of Complaints:{" "}{values[index]}
+                             < hr />
+                             </li>)}
+                    </ul>
                 </div>
             </div>
         )
@@ -194,7 +207,7 @@ export default Feed
 //                 })
 //             })
 //         }
-        
+
 //     }
 
 //     render() {
@@ -226,7 +239,7 @@ export default Feed
 //                         </li>
 //                     ))}
 //                 </ul>
-                
+
 //             </div>
 //         )
 //     }
