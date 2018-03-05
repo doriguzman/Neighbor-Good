@@ -4,7 +4,9 @@ import axios from "axios";
 import ComplaintMarker from './complaintMarker'
 import ComplaintPicture from './complaintPicture'
 import '../CSS/Map.css'
+
 import Key from './key'
+
 
 const defaultOptions = {
     defaultCenter: { lat: 40.7128, lng: -73.9 },
@@ -170,70 +172,9 @@ class Map extends React.Component {
                         ))}
                     </ul>
                 </div>
-
             </div>
         );
     }
 }
 
 export default Map;
-
-
-
-
-
-
-
-// selectAgency: '',
-// selectBorough: '',
-// selectMonth: '',
-
-
-
-// handleSelectBorough = (e) => {
-//     const { complaints, selectAgency } = this.state
-//     this.setState({
-//         selectBorough: e.target.value,
-//         filtered: complaints.filter(complaint => complaint.agency_name.includes(selectAgency) && complaint.borough.includes(e.target.value))
-//     })
-// }
-
-// handleSelectMonth = (e) => {
-//     const { complaints, selectAgency, selectBorough } = this.state
-//     this.setState({
-//         selectMonth: e.target.value,
-//         filtered: complaints.filter(complaint => complaint.agency_name.includes(selectAgency) && complaint.borough.includes(selectBorough) && complaint.created_date.split('-')[1].includes(e.target.value))
-//     })
-// }
-
-
-
-// handleSelectAgency = (e) => {
-//     const { complaints, selectBorough } = this.state
-//     this.setState({
-//         selectAgency: e.target.value,
-//         filtered: complaints.filter(complaint => complaint.agency_name.includes(e.target.value) && complaint.borough.includes(selectBorough))
-//     })
-// }
-
-
-
-
-
-
-// Select an Agency: {" "}
-// <select id="filter" onChange={this.handleSelectAgency} value={selectAgency}>
-//     {this.agencies.map(opt =>
-//         <option>{opt}</option>)}
-// </select>
-// <br />
-// Select a borough: {" "}
-// <select id='filter' onChange={this.handleSelectBorough} value={selectBorough} >
-//     {this.boroughs.map(opt =>
-//         <option>{opt}</option>)}
-// </select>
-// <br />
-// Select a Month: {" "}
-// <select id='filter' value={selectMonth} onChange={this.handleSelectMonth}>
-//     {this.months.map(month => <option>{month}</option>)}
-// </select>
