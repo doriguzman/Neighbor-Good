@@ -28,7 +28,7 @@ html{
 }
 
 #feedSubmit:hover {
-color: grey;
+color: #D9E5D6;
 font-weight: bold;
 background-color:#D9E5D6;
 }
@@ -41,4 +41,31 @@ background-color:#D9E5D6;
 a {
     padding:10px;
 }
+
+#inputBox{
+    width: 85px;
+    height:20px;
+    font-size: 16px;
+    text-align: center;
+}
+#zip-code{
+    font-size: 20px;
+ }
+
+ button{
+     height:25px;
+     width:60px;
+     border-radius:6px;
+     background-color: black;
+     color:white;
+ }
+ #feed li {
+     font-size:20px;
+     font-weight: bold;
+     
+     padding-bottom:10px;
+ }
+ #streetEasy{
+    font-size:22px;
+ }
 
