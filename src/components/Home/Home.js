@@ -66,17 +66,21 @@ class Home extends React.Component {
 <div>   
       <div className='homeback'>
           <div id='title'>
-          <h1> Welcome to NeighborGood </h1>
-          <h3> We want to help find the right neighborhood for you!</h3>
+          <div id='middleOfHome'>
+          <h1> <strong>Welcome to NeighborGood </strong> </h1>
+          <h3><strong> We want to help find the right neighborhood for you! </strong></h3>
          </div>
+          </div>
       </div>
 
       <div id='allStories'>
         <UserStory users={this.users} />
-        <h3 style={styles.bottom}>Want to report an issue in your neighborhood? <a href='http://www1.nyc.gov/311/index.page'> Click Here</a></h3>
-      </div>
 
-    </div>
+     </div>
+     <div>
+      <h3 class='endbanner' >Want to report an issue in your neighborhood? <a href='http://www1.nyc.gov/311/index.page'> Click Here</a></h3>
+     </div>
+     </div>
     )
   }
 
