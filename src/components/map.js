@@ -113,8 +113,8 @@ class Map extends React.Component {
         console.log(this.state.ComplaintsObj)
         return (
             <div id="map-container">
+                <div id='map'>
                 <GoogleMapReact
-                    id="googleMap" 
                     bootstrapURLKeys={{
                         key: "AIzaSyBcCGZr6R8jHxcmRoMtwD6vkUDAw-ceXDU"
                     }}
@@ -133,7 +133,7 @@ class Map extends React.Component {
                         />
                     ))}
                 </GoogleMapReact>
-                <i>This information is provided by NYC Open Data 311</i>
+                </div>
                 <div id='checklist'>
                 <ul >
                     <strong>SELECT A BOROUGH: </strong> {" "}

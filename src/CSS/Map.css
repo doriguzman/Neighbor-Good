@@ -1,0 +1,13 @@
+#mapPage {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    height: 100%;
+}
+
+#map-container {
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+}
+
