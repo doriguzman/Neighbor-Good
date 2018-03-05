@@ -103,10 +103,11 @@
 
  /* using straight flex box */
 
-/* 
+
 #MapPage {
     display: flex;
     flex-direction: column;
+}
 #mapPage {
     display: flex;
     flex-direction: column;
@@ -152,5 +153,3 @@
 li {
     padding-right: 5px;
 }
-
-*/
