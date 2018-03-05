@@ -67,8 +67,7 @@ class Feed extends React.Component {
             <div id='totalFeed'>
                 <div id='feedImage' > </div>
             <div id="feed">
-                
-                <h1>Most Recent Complaints</h1>
+                <h1 id='feedTitle'> Most Recent Complaints</h1>
                 <a href={`https://streeteasy.com/for-sale/nyc/status:open%7Czip:${userInput}?refined_search=true`} target="_blank">Find apartments On StreetEasy!</a>
                 <br />
                 Enter a Zip Code: {" "}
