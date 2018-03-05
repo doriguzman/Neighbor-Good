@@ -107,6 +107,7 @@
     
     
 } */
+
 #MapPage {
     display: flex;
     flex-direction: column;
@@ -158,8 +159,10 @@ padding-bottom: 15px;
 }
 
 #checklist li {
+   display:flex;
    justify-content: left;
    font-family: 'Montserrat', sans-serif;
+   
 }
 
 #complaint {
