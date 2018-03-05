@@ -10,7 +10,8 @@ class Feed extends React.Component {
         this.state = {
             feed: [],
             userInput: '',
-            message: ''
+            message: '', 
+            clicked:false
         }
     }
 
@@ -38,7 +39,8 @@ class Feed extends React.Component {
         console.log(`userrrrr`,userInput)
         if(userInput.length !== 5 || isNaN(userInput)) {
             this.setState({
-                message: 'Please enter 5 numbers'
+                message: 'Please enter 5 numbers', 
+                
             })
         } else {
             axios
@@ -47,7 +49,8 @@ class Feed extends React.Component {
                 console.log(`resawrgargwa`, res)
                 this.setState({
                     feed: res.data.filter(complaint => complaint.incident_zip && complaint.incident_address),
-                    message: ''
+                    message: '', 
+                    clicked:true
                 })
             })
             .catch(err => {
@@ -61,8 +64,9 @@ class Feed extends React.Component {
     }
 
     render() {
-        const { feed, userInput, message } = this.state
-        console.log(`feed`, feed)
+        const { feed, userInput, message, clicked } = this.state
+        
+        console.log(this.state)
         return (
             <div id='totalFeed'>
                 <div id='feedImage' > </div>
@@ -70,7 +74,7 @@ class Feed extends React.Component {
                
                 <h1 id='feedTitle'> Most Recent Complaints</h1>
                 <div id='streetEasy'>
-                <a href={`https://streeteasy.com/for-sale/nyc/status:open%7Czip:${userInput}?refined_search=true`} target="_blank">Find apartments On StreetEasy!</a>
+                {clicked ? <a href={`https://streeteasy.com/for-sale/nyc/status:open%7Czip:${userInput}?refined_search=true`} target="_blank">Find apartments On StreetEasy!</a>: ''}
                 </div>
                 <br />
                 <br/>
@@ -83,7 +87,8 @@ class Feed extends React.Component {
                     placeholder="eg. 10469"
                 />
             <button id= 'feedSubmit' onClick={this.handleSubmit}>Submit</button>
-            {message}
+            {message} 
+
             <br/>
             <br/>
                 <ul id="feedList">
