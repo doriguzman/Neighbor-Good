@@ -28,14 +28,14 @@ class NeighborGood extends React.Component {
 
 
     
-
     handleMap = () => {
         const { SelectedComplaint } = this.state
         return (
-            <div id="MapPage">
-                <h1 class="title">NeighborGood</h1>
-                <Map onComplaintClick={this.handleComplaint} />
-                {SelectedComplaint ? ComplaintInfo(SelectedComplaint) : <strong id='complaintinfo'> Choose a complaint </strong>}
+            <div id="mapPage">
+                <div><h1 id="map-title">NeighborGood</h1></div>
+                <div><Map onComplaintClick={this.handleComplaint} /></div>
+                <div>{SelectedComplaint ? ComplaintInfo(SelectedComplaint) : <strong id='compDes'> Choose a complaint </strong>}</div>
+                <br />
             </div>
         )
     }
@@ -55,10 +55,11 @@ class NeighborGood extends React.Component {
 
 
 
-
     render() {
+        const { SelectedComplaint } = this.state
+        console.log(`yay i  made it `, SelectedComplaint)
         return (
-            <div>
+            <div >
                 <Switch>
                     <Route exact path='/NeighborGood' render={this.handleHome} />
                     <Route path='/NeighborGood/map' render={this.handleMap} />

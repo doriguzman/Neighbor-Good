@@ -107,23 +107,17 @@
 #MapPage {
     display: flex;
     flex-direction: column;
+#mapPage {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    height: 100%;
 }
 
 #map-container {
     display: flex;
     flex-direction: row;
-}
- */
-
- /* #mapPage {
-    display: flex;
-    flex-direction: column;
-    padding-top: 100px;
-    height: 100%;
- }
- 
- #map-container {
-    display: flex;
-    flex-direction: row;
     background-color: red;
- } */
+}
+
+*/

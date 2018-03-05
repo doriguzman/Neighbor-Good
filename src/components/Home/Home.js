@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import UserStory from './UserStory';
 import '../../CSS/Home.css'
 
-
 const styles = {
 
   bottom: {
@@ -14,7 +13,6 @@ const styles = {
 
   }
 };
-
 class Home extends React.Component {
   constructor() {
     super();
@@ -47,35 +45,21 @@ class Home extends React.Component {
 
       {
         user: 'Adam',
-        story: ` is an avid sports car owner 
-        and wanted his cars to avoid 
-        possible damage.
-        He used our app to find a 
-        neighborhood 
-        with minimal road issues! `,
+        story: ` is an avid sports car owner and wanted his cars to avoid possible damage.
+        He used our app to find a neighborhood with minimal road issues! `,
+        story2: <p></p>,
         filterComplaint: '',
         image: 'https://previews.123rf.com/images/deviyanthi79/deviyanthi791404/deviyanthi79140400037/27968665-simple-cartoon-of-a-businessman-driving-a-sport-car.jpg'
       },
       {
         user: '',
-        story: `Are you not Olga? 
-        Are you not Quavo? 
-        Are you not Adam? 
-        Do you not know who you are?`,
+        story: <p><a href='localhost/neighborgood/map'>Go to the map to find out!</a> </p>,
         image: 'http://www.bamradionetwork.com/images/easyblog_images/4240/2e1ax_elegantwhite_entry_thinking.jpg'
       }
 
     ]
-    this.URL = {
-      Info: 'http://www1.nyc.gov/311/index.page'
-    }
   }
 
-  // handleClick = () => {
-  // this.setState = {
-
-  // }
-  // }
 
   render() {
     return (
@@ -83,8 +67,8 @@ class Home extends React.Component {
       <div className='homeback'>
           <div id='title'>
           <div id='middleOfHome'>
-          <h1> Welcome to NeighborGood </h1>
-          <h3> We want to help find the right neighborhood for you!</h3>
+          <h1> <strong>Welcome to NeighborGood </strong> </h1>
+          <h3><strong> We want to help find the right neighborhood for you! </strong></h3>
          </div>
           </div>
       </div>
@@ -92,14 +76,14 @@ class Home extends React.Component {
       <div id='allStories'>
         <UserStory users={this.users} />
 
-      </div>
-      <div class='endbanner'>
-      <h3 class='endbanner' style={styles.bottom}>Want to report an issue in your neighborhood? <a href='http://www1.nyc.gov/311/index.page'> Click Here</a></h3>
-      </div>
-    </div>
+     </div>
+     <div>
+      <h3 class='endbanner' >Want to report an issue in your neighborhood? <a href='http://www1.nyc.gov/311/index.page'> Click Here</a></h3>
+     </div>
+     </div>
     )
   }
 
 }
 
-export default Home;
+export default Home; 

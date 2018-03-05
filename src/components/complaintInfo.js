@@ -1,5 +1,4 @@
 import React from 'react'
-
 const ComplaintInfo = (complaint) => {
     return (
         <div id='complaintinfo'>
