@@ -22,14 +22,14 @@
     font-family: 'Montserrat', sans-serif;
     height:75px;
     width: 100%;
-    background-color: black;
+    background-color: #7A7978;
     position:fixed;
     display: flex;
     justify-content: space-between;
   }
  nav{
    
-    background-color: black;
+    background-color: #7A7978;
     display: flex;
     /* color: #C0BAB6; */
     /* margin-left: 330px; */
@@ -81,6 +81,7 @@
 background-color: lightblue;
 }
 .endbanner{
+
   padding-bottom:10px;
   padding-top:10px;
   background-color: black;

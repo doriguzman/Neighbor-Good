@@ -66,7 +66,7 @@ class Feed extends React.Component {
             .then(res => {
                 console.log(`resawrgargwa`, res)
                 this.setState({
-                    feed: res.data.filter(complaint => complaint.incident_zip && complaint.incident_address && comp.complaint_type),
+                    feed: res.data.filter(complaint => complaint.incident_zip && complaint.incident_address && complaint.complaint_type),
                     message: '', 
                     clicked:true
                 })

@@ -102,17 +102,23 @@
   } */
 
  /* using straight flex box */
-
-
+ @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700i');
+/* html{
+    
+    
+} */
 #MapPage {
     display: flex;
     flex-direction: column;
+    
 }
 #mapPage {
     display: flex;
     flex-direction: column;
     padding-top: 100px;
     height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    
 }
 
 #map-content {
@@ -139,15 +145,18 @@
     display: inline;
     font-size: small;
     justify-content: flex-start;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #checklist li {
    justify-content: left;
+   font-family: 'Montserrat', sans-serif;
 }
 
 #complaint {
     padding-top: 70px;
     padding-right: 275px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 li {
