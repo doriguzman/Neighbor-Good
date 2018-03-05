@@ -112,6 +112,7 @@
     flex-direction: column;
     
 }
+
 #mapPage {
     display: flex;
     flex-direction: column;
@@ -121,6 +122,10 @@
     
 }
 
+#map-title{
+
+padding-bottom: 15px;
+}
 #map-content {
     display: flex;
     flex-direction: row;
@@ -137,6 +142,10 @@
     height: 100%;
 }
 
+#keyImage{
+  padding-right:5px;
+  padding-left:5px
+}
 #key-component {
     height: 10%;
 }

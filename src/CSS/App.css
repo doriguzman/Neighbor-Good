@@ -39,7 +39,7 @@
  li{
   list-style-type: none; 
  }
- li:hover{
+ navlink:hover{
    background-color:lightblue
  }
 
