@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700i');
-#totalFeed{
-    padding-top: 1200x;
-}
+
 #feedImage {
     height: 500px;
     width:100%;
@@ -19,7 +17,7 @@ html{
 #feed { 
     font-family: 'Montserrat', sans-serif;
     background-repeat: no-repeat; 
-    background-color: #D9E5D6;
+    background-color: #D9E5D6
 }
 
 
