@@ -46,7 +46,7 @@ const Key = ({ }) => {
     return (
         <div>
             <ul id="key">
-                {pictures.map(pic => <li>
+                {pictures.map(pic => <li id='keyImage'>
                     <img
                         src={pic.image}
                         alt="key pictures"

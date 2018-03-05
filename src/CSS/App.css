@@ -39,7 +39,8 @@
  li{
   list-style-type: none; 
  }
- li:hover{
+
+ .navlink:hover{
    background-color:lightblue
  }
 
@@ -81,7 +82,6 @@
 background-color: lightblue;
 }
 .endbanner{
-
   padding-bottom:10px;
   padding-top:10px;
   background-color: black;

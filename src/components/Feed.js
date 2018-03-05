@@ -88,6 +88,7 @@ class Feed extends React.Component {
         return (
             <div id='totalFeed'>
                 <div id='feedImage' > </div>
+            
             <div id="feed">
                
                 <h1 id='feedTitle'> Most Recent Complaints</h1>
