@@ -9,8 +9,8 @@ const ComplaintMarker = ({ image, selected, onComplaintClick, complaint  }) => (
     className={selected ? "complaint selected" : "complaint"}
     alt=""
     src={image}
-    width="10"
-    height='15'
+    width="15"
+    height='20'
     onClick={onComplaintClick}
   />
 );
