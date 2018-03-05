@@ -82,7 +82,7 @@ class Home extends React.Component {
 
      </div>
      <div>
-      <h3 class='endbanner' >Want to report an issue in your neighborhood? <a href='http://www1.nyc.gov/311/index.page'> Click Here</a></h3>
+      <h3 class='endbanner' >Want to report an issue in your neighborhood? <a id='report' href='http://www1.nyc.gov/311/index.page'> Click Here</a></h3>
      </div>
      </div>
     )

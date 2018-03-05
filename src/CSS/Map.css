@@ -103,10 +103,10 @@
 
  /* using straight flex box */
 
-/* 
-#MapPage {
+
+/* #MapPage {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;}
 #mapPage {
     display: flex;
     flex-direction: column;
@@ -118,6 +118,45 @@
     display: flex;
     flex-direction: row;
     background-color: red;
-}
+} */
 
-*/
+#MapPage {
+    display: flex;
+    flex-direction: column;}
+#mapPage {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    height: 100%;
+}
+#map-content {
+    display: flex;
+    flex-direction: row;
+}
+#map {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    padding-left: 20px;
+}
+#googleMap {
+    height: 100%;
+}
+#key-component {
+    height: 10%;
+}
+#key li {
+    display: inline;
+    font-size: small;
+    justify-content: flex-start;
+}
+#checklist li {
+   justify-content: left;
+}
+#complaint {
+    padding-top: 70px;
+    padding-right: 275px;
+}
+li {
+    padding-right: 5px;
+}
