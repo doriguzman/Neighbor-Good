@@ -1,0 +1,37 @@
+#totalFeed{
+    padding-top: 1200x;
+}
+#feedImage {
+    height: 600px;
+    width:100%;
+    background-image: url('Neighborhood.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-bottom: 148px;
+}
+
+#feed { font-family: 'Karma', serif;
+        background-repeat: no-repeat; 
+        font-family: 'Open Sans',
+        sans-serif;
+        background-color: #D9E5D6;
+        }
+
+#inputBox {
+
+}
+#feedList {
+    float: center;
+    background-color: #D9E5D6;
+}
+
+#feedSubmit:hover {
+color: grey;
+font-weight: bold;
+}
+
+#feedTitle {
+   font-size: 50px;
+   font-family: 'PT Serif',
+   serif;
+}

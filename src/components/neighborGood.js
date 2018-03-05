@@ -27,7 +27,6 @@ class NeighborGood extends React.Component {
 
 
     
-
     handleMap = () => {
         const { SelectedComplaint } = this.state
         return (
@@ -55,10 +54,11 @@ class NeighborGood extends React.Component {
 
 
 
-
     render() {
+        const { SelectedComplaint } = this.state
+        console.log(`yay i  made it `, SelectedComplaint)
         return (
-            <div>
+            <div >
                 <Switch>
                     <Route exact path='/NeighborGood' render={this.handleHome} />
                     <Route path='/NeighborGood/map' render={this.handleMap} />

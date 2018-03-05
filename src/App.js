@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Link, Switch, Route } from 'react-router-dom';
 import './CSS/App.css';
 import NeighborGood from './components/neighborGood'
-import Home from './components/Home/Home.js'
+import Home from './components/Home/Home.js';
+
 
 class App extends Component {
   render() {
@@ -35,4 +36,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App; 

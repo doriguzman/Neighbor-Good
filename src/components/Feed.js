@@ -64,8 +64,10 @@ class Feed extends React.Component {
         const { feed, userInput, message } = this.state
         console.log(`feed`, feed)
         return (
+            <div id='totalFeed'>
+                <div id='feedImage' > </div>
             <div id="feed">
-                <h1>Most Recent Complaints</h1>
+                <h1 id='feedTitle'> Most Recent Complaints</h1>
                 <a href={`https://streeteasy.com/for-sale/nyc/status:open%7Czip:${userInput}?refined_search=true`} target="_blank">Find apartments On StreetEasy!</a>
                 <br />
                 Enter a Zip Code: {" "}
@@ -76,7 +78,7 @@ class Feed extends React.Component {
                     id="inputBox"
                     placeholder="eg. 10469"
                 />
-            <button onClick={this.handleSubmit}>Submit</button>
+            <button id= 'feedSubmit' onClick={this.handleSubmit}>Submit</button>
             {message}
                 <ul id="feedList">
                     {feed.map(comp => (
@@ -87,9 +89,10 @@ class Feed extends React.Component {
                     ))}
                 </ul>
                 
+                </div>
             </div>
         )
     }
 }
 
-export default Feed
+export default Feed;
