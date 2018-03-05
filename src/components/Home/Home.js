@@ -53,7 +53,7 @@ class Home extends React.Component {
       },
       {
         user: '',
-        story: <p><a href='localhost/neighborgood/map'>Go to the map to find out!</a> </p>,
+        story: <p><a href='http://localhost:3000/NeighborGood/Map'>Go to the map to find out!</a> </p>,
         image: 'http://www.bamradionetwork.com/images/easyblog_images/4240/2e1ax_elegantwhite_entry_thinking.jpg'
       }
 
