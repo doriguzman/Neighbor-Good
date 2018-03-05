@@ -2,22 +2,25 @@
   /* background-image: url('https://na.rdcpix.com/956655953/8ecb8b5c10a19ccbe1daba7bc38ec77cw-c293724xd-w685_h860_q80.jpg'); */
   /* background-size: 100%; */
 
-
+  #thewholething {
+    width: 100%;
+  }
 
   #navHolder{
     height:90px;
+    width: 100%;
     background-color: black;
-    width:100%;
     position:fixed;
+    display: flex;
+    justify-content: space-between;
   }
  nav{
     height: 40px;
     background-color: black;
-    width:80%;
+    width:25%;
+    display: flex;
     /* color: #C0BAB6; */
-    display:flex;
-    justify-content:flex-end;
-    margin-left: 330px;
+    /* margin-left: 330px; */
 
   }
 
@@ -51,8 +54,8 @@
 }
 #logoName{
   color:white;
-  margin-top:30px;
-  margin-left:8px;
+  margin-top:30px; 
+  /* margin-left:8px; */
   margin-bottom:40px;
   float:left
 }
