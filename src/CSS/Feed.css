@@ -30,6 +30,7 @@ html{
 #feedSubmit:hover {
 color: #D9E5D6;
 font-weight: bold;
+background-color:#D9E5D6;
 }
 
 #feedTitle {
@@ -40,6 +41,7 @@ font-weight: bold;
 a {
     padding:10px;
 }
+
 #inputBox{
     width: 85px;
     height:20px;
@@ -66,3 +68,4 @@ a {
  #streetEasy{
     font-size:22px;
  }
+
