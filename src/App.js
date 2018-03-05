@@ -11,7 +11,7 @@ class App extends Component {
      
 <div id='navHolder'>
 <div>
-<img id='logo' src='https://thumbs.dreamstime.com/b/neighborhood-icon-vector-suburban-silhouette-design-element-43699957.jpg' height='90px'/>
+<img id='logo' src='https://thumbs.dreamstime.com/b/neighborhood-icon-vector-suburban-silhouette-design-element-43699957.jpg' height='70px'/>
 <h2 id='logoName'> NeighborGood </h2>
 </div>
       <nav>
@@ -28,7 +28,7 @@ class App extends Component {
           <Route path='/NeighborGood' component={NeighborGood}/>
         </Switch>
         </div>
-      // </div>
+    
     );
   }
 }
