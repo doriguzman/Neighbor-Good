@@ -103,10 +103,11 @@
 
  /* using straight flex box */
 
-/* 
+
 #MapPage {
     display: flex;
     flex-direction: column;
+}
 #mapPage {
     display: flex;
     flex-direction: column;
@@ -114,10 +115,41 @@
     height: 100%;
 }
 
-#map-container {
+#map-content {
     display: flex;
     flex-direction: row;
-    background-color: red;
 }
 
-*/
+#map {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    padding-left: 20px;
+}
+
+#googleMap {
+    height: 100%;
+}
+
+#key-component {
+    height: 10%;
+}
+
+#key li {
+    display: inline;
+    font-size: small;
+    justify-content: flex-start;
+}
+
+#checklist li {
+   justify-content: left;
+}
+
+#complaint {
+    padding-top: 70px;
+    padding-right: 275px;
+}
+
+li {
+    padding-right: 5px;
+}
