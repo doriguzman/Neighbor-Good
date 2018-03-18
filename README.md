@@ -18,8 +18,8 @@ npm start
 ```
 Open http://localhost:3000/ to view the app in a browser.
 
-Save time by visiting our site via [Netlify](https://www.netlify.com/).
-    * [NeighborGood](https://neighborgood.netlify.com/)
+### Visit our site below
+[NeighborGood](https://neighborgood.netlify.com/)
 
 
 
